@@ -10,11 +10,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const links = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
+    { name: "Accueil", href: "#home" },
+    { name: "A propos", href: "#about" },
+    { name: "Experiences", href: "#experience" },
     { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
+    { name: "Projets", href: "#projects" },
   ]
 
   return (
@@ -42,7 +42,7 @@ const Navbar = () => {
             variant="primary"
             className="bg-primary shadow-primary/20 rounded-lg px-5 py-2 text-sm font-bold text-white shadow-lg transition-all hover:brightness-110"
           >
-            <Link href="#contact">Hire Me</Link>
+            <Link href="#contact">Contact</Link>
           </Button>
         </div>
 
