@@ -10,36 +10,44 @@ type ExperienceItem = {
 
 const experiences: ExperienceItem[] = [
   {
-    id: "senior",
-    title: "Senior Full-stack Developer",
-    company: "TechNova Solutions",
-    date: "2021 - Present",
+    id: "student",
+    title: "Étudiant en Master",
+    company: "École Nationale d'Informatique",
+    date: "2025 - Présent",
     bullets: [
-      "Led development of a microservices architecture serving 1M+ users.",
-      "Optimized application performance reducing load times by 45%.",
-      "Mentored a team of 5 junior developers on React best practices.",
+      "Approfondissement des architectures logicielles avancées et des systèmes distribués.",
+      "Réalisation de projets académiques orientés performance et conception d'applications évolutives.",
     ],
   },
   {
-    id: "frontend",
-    title: "Frontend Engineer",
-    company: "Creative Digital Agency",
-    date: "2018 - 2021",
+    id: "bachelor",
+    title: "Licence en Informatique",
+    company: "École Nationale d'Informatique",
+    date: "2025",
     bullets: [
-      "Developed 20+ responsive web applications using Next.js and Tailwind CSS.",
-      "Integrated complex 3rd party APIs for payment and logistics systems.",
-      "Improved SEO scores across client sites by an average of 30%.",
+      "Obtention d’une Licence en Informatique dans le parcours \"Génie logiciel et Bases de données\".",
+      "Acquisition de solides bases en algorithmique, structures de données et génie logiciel.",
     ],
   },
   {
-    id: "junior",
-    title: "Junior Web Developer",
-    company: "StartUp Inc.",
-    date: "2016 - 2018",
+    id: "stage1",
+    title: "Stagiaire Développeur web",
+    company: "Société du Port à gestion Autonome de Toamasina (SPAT)",
+    date: "Sept - Dec 2024",
     bullets: [
-      "Maintained and updated legacy PHP codebases for internal CRM tools.",
-      "Assisted in migrating monolithic services to modern Node.js stack.",
-      "Conducted end-to-end testing ensuring cross-browser compatibility.",
+      "Développement d'une plateforme de gestion des congés permettant la demande, l’approbation et le suivi des congés avec Next.js, NestJS et MySQL.",
+      "Modélisation d’une base de données relationnelle (employés, demandes, approbations).",
+      "Implémentation d'API REST avec authentification basée sur un RBAC et JWT.",
+    ],
+  },
+  {
+    id: "stage2",
+    title: "Stagiaire Développeur web",
+    company: "Société de Manutention de Marchandises Conventionnelles (SMMC)",
+    date: "Août - Nov 2023",
+    bullets: [
+      "Conception et développement d’une application web de suivi des entrées et sorties des visiteurs avec HTML, CSS et JSP.",
+      "Mise en place d’un tableau de bord administratif pour visualiser et gérer les flux de visiteurs, permettant une réduction des erreurs d’enregistrement.",
     ],
   },
 ]
@@ -54,10 +62,10 @@ const Experience = () => {
       <div className="relative z-20 mx-auto max-w-4xl px-6">
         <div className="mb-16 space-y-4 text-center">
           <h2 className="text-primary text-sm font-bold tracking-widest uppercase">
-            02. Career Path
+            02. Parcours
           </h2>
-          <h3 className="text-3xl font-black text-foreground-light/90 dark:text-foreground-dark/90 md:text-5xl">
-            Work Experience
+          <h3 className="text-foreground-light/90 dark:text-foreground-dark/90 text-3xl font-black md:text-5xl">
+            Études & Expérience
           </h3>
         </div>
 
