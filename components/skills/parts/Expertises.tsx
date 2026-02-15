@@ -12,45 +12,42 @@ const expertises: Expertise[] = [
   {
     id: "frontend",
     title: "Frontend",
-    desc: "React, Vue, Tailwind CSS, TypeScript",
+    desc: "Création d'interfaces interactives et ergonomiques centrées utilisateur",
     Icon: Terminal,
   },
   {
     id: "backend",
     title: "Backend",
-    desc: "Node.js, Python, PostgreSQL, MongoDB",
+    desc: "Conception d’architectures serveur robustes et performantes",
     Icon: Database,
   },
   {
     id: "cloud",
     title: "Cloud & DevOps",
-    desc: "AWS, Docker, CI/CD, Kubernetes",
+    desc: "Déploiement d’infrastructures scalables et automatisation des flux",
     Icon: Cloud,
   },
   {
     id: "design",
     title: "Design UI/UX",
-    desc: "Figma, Adobe XD, Prototyping",
+    desc: "Conception d’expériences utilisateur intuitives et visuellement attrayantes",
     Icon: PencilRulerIcon,
   },
 ]
 
-const Skills = () => {
+const Expertises = () => {
   return (
-    <div
-      className="bg-background-light dark:bg-background-dark"
-    >
+    <div className="bg-background-light dark:bg-background-dark">
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mb-10 space-y-4 text-center">
           <h3 className="text-foreground-light/90 dark:text-foreground-dark text-3xl font-black md:text-5xl">
-            Expertise in Modern Tech
+            Expertise en solutions digitales
           </h3>
           <p className="text-foreground-light/80 dark:text-foreground-dark/80 mx-auto max-w-2xl text-lg leading-relaxed">
-            I continuously evolve my tech stack to stay ahead in the rapidly
-            changing digital landscape.
+            Je développe des solutions digitales complètes, de la conception à la mise en production, en combinant design, performance et scalabilité.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
           {expertises.map((e) => {
             const Icon = e.Icon
             return (
@@ -72,4 +69,4 @@ const Skills = () => {
   )
 }
 
-export default Skills
+export default Expertises
