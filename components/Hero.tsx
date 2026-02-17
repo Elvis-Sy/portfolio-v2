@@ -85,7 +85,7 @@ const Hero = () => {
                 alt="Portrait Elvis Sylvano"
                 fill
                 className="object-cover grayscale transition-all duration-700 hover:grayscale-0"
-                src="/me/profil.png"
+                src="/me/profil.jpg"
                 priority
               />
             </div>
