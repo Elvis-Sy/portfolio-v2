@@ -1,21 +1,23 @@
-import React, { useMemo } from "react"
+import React, { useMemo, useRef, useEffect } from "react"
 import { ArrowUpRightFromSquare } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import VanillaTilt from "vanilla-tilt"
 
 type Project = {
   id: string
   title: string
   tags: string[]
   desc: string
-  img: string
+  gradient?: [string, string]
   href?: string
 }
 
 const MAX_VISIBLE_TAGS = 3
 
 const ProjectCard = React.memo(({ project }: { project: Project }) => {
-  // Optimisation : évite recalcul à chaque render
+  const cardRef = useRef<HTMLDivElement>(null)
+
   const { visibleTags, hiddenCount, hiddenTagsLabel } = useMemo(() => {
     const visible = project.tags.slice(0, MAX_VISIBLE_TAGS)
     const hidden = project.tags.slice(MAX_VISIBLE_TAGS)
@@ -27,60 +29,103 @@ const ProjectCard = React.memo(({ project }: { project: Project }) => {
     }
   }, [project.tags])
 
+  useEffect(() => {
+    if (cardRef.current) {
+      VanillaTilt.init(cardRef.current, {
+        max: 10,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.15,
+        gyroscope: false,
+      })
+    }
+  }, [])
+
   return (
-    <article className="group relative aspect-square overflow-hidden rounded-3xl bg-slate-900 shadow-xl">
-      <Image
-        alt={project.title}
-        src={project.img}
-        fill
-        sizes="(max-width: 768px) 100vw, 33vw"
-        className="object-cover opacity-60 transition-transform duration-700 group-hover:scale-110"
-        priority={false}
-      />
+    <article
+      ref={cardRef}
+      className="overflow-hidden group rounded-3xl"
+      style={{
+        transformStyle: "preserve-3d",
+        transform: "perspective(1000px)",
+      }}
+    >
+      <div
+        className="relative flex h-100 w-full max-w-148 flex-col justify-end rounded-3xl p-8"
+        style={{
+          background: `linear-gradient(120deg, ${project.gradient?.[0]}, ${project.gradient?.[1]})`,
+        }}
+      >
+        {/* Background pattern optionnel */}
+        <Image
+          src="/projects/project-bg.svg"
+          alt="background"
+          fill
+          className="pointer-events-none absolute inset-0 object-cover opacity-20"
+        />
 
-      <div className="absolute inset-0 flex flex-col justify-end bg-linear-to-t from-slate-950 via-slate-950/20 to-transparent p-8">
-        <div className="translate-y-2 space-y-4 transition-transform duration-500 group-hover:translate-y-0">
+        {/* IMAGE INCLINÉE */}
+        <Image
+          src={`/projects/${project.id}.png`}
+          alt={project.title}
+          width={500}
+          height={300}
+          className="absolute top-8 -right-4 rounded-xl shadow-2xl"
+          style={{
+            transform: "rotate(-18deg) translateZ(50px)",
+            objectFit: "contain",
+          }}
+        />
 
-          {/* TAGS */}
-          <div className="flex flex-wrap gap-2">
-            {visibleTags.map((tag) => (
-              <span
-                key={tag}
-                className="border-primary bg-slate-900/70 flex max-w-full items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-medium text-slate-300"
-              >
-                <span className="bg-primary h-1.5 w-1.5 shrink-0 rounded-full"></span>
-                <span className="truncate">{tag}</span>
-              </span>
-            ))}
+        <div
+          className="absolute bottom-0 left-0 h-32 w-full"
+          style={{
+            background: `linear-gradient(0deg, #000, transparent)`,
+          }}
+        />
 
-            {hiddenCount > 0 && (
-              <span
-                title={hiddenTagsLabel}
-                className="bg-gray-900/40 border border-primary text-primary cursor-pointer rounded-full px-3 py-1.5 text-xs font-semibold"
-              >
-                +{hiddenCount} more
-              </span>
-            )}
+        {/* CONTENT */}
+        <div className="absolute inset-0 flex flex-col justify-end bg-linear-to-t from-slate-950 via-slate-950/20 to-transparent p-8">
+          <div className="translate-y-2 space-y-4 transition-transform duration-500 group-hover:translate-y-0">
+            {/* TAGS */}
+            <div className="flex text-xs flex-wrap gap-2">
+              {visibleTags.map((tag) => (
+                <span
+                  key={tag}
+                  className="border-primary flex max-w-full items-center gap-2 rounded-full border-2 bg-slate-900 px-3 py-1.5 font-medium text-slate-300"
+                >
+                  <span className="bg-primary h-1.5 w-1.5 shrink-0 rounded-full"></span>
+                  <span className="truncate">{tag}</span>
+                </span>
+              ))}
+
+              {hiddenCount > 0 && (
+                <span
+                  title={hiddenTagsLabel}
+                  className="border-primary cursor-pointer flex max-w-full items-center gap-2 rounded-full border-2 bg-slate-900 px-3 py-1.5 font-medium text-slate-300"
+                >
+                  +{hiddenCount} autre(s)
+                </span>
+              )}
+            </div>
+
+            {/* TITLE */}
+            <h4 className="text-2xl font-bold transition-transform duration-500 translate-y-10 group-hover:translate-y-0 text-white">{project.title}</h4>
+
+            {/* DESCRIPTION */}
+            <p className="line-clamp-2 text-sm text-slate-300 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+              {project.desc}
+            </p>
+
+            {/* LINK */}
+            <Link
+              href={project.href ?? "#"}
+              className="text-primary inline-flex items-center gap-2 font-bold hover:underline"
+            >
+              Voir informations
+              <ArrowUpRightFromSquare size={18} />
+            </Link>
           </div>
-
-          {/* TITLE */}
-          <h4 className="text-2xl font-bold text-white">
-            {project.title}
-          </h4>
-
-          {/* DESCRIPTION */}
-          <p className="line-clamp-2 text-sm text-slate-300 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-            {project.desc}
-          </p>
-
-          {/* LINK */}
-          <Link
-            href={project.href ?? "#"}
-            className="text-primary inline-flex items-center gap-2 font-bold hover:underline"
-          >
-            View Case Study
-            <ArrowUpRightFromSquare size={18} />
-          </Link>
         </div>
       </div>
     </article>

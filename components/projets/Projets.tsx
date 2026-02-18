@@ -12,38 +12,38 @@ type Project = {
   title: string
   tags: string[]
   desc: string
-  img: string
   href?: string
+  gradient?: [string, string]
 }
 
 const projects: Project[] = [
   {
-    id: "quantum",
-    title: "Quantum Analytics",
-    tags: ["React", "Charts", "WebSockets", "D3.js"],
-    desc: "A high-performance real-time data visualization platform for global logistics tracking.",
-    img: "/me/profil.png",
+    id: "flotmax",
+    title: "FlotMax",
+    tags: ["typescript", "react", "tailwindcss"],
+    desc: "Application aidant pour les problèmes de flot maximal ✍🏻",
+    gradient: ["#1e3a8a", "#3b0764"]
   },
   {
-    id: "luxe",
-    title: "Luxe Market",
-    tags: ["Next.js", "Stripe"],
-    desc: "Luxury e-commerce experience with seamless checkout and AR product previews.",
-    img: "/me/profil.png",
+    id: "moodspace",
+    title: "MoodSpace",
+    tags: ["react", "typescript", "tailwindcss"],
+    desc: "Plateforme de gestion et de suivi des congés des employés 📝",
+    gradient: ["#f97316", "#c2410c"]
   },
   {
-    id: "flow",
-    title: "Flow Management",
+    id: "portfolio-2",
+    title: "Portfolio V2",
     tags: ["Node.js", "AWS"],
     desc: "Enterprise project management tool with AI-driven resource allocation.",
-    img: "/me/profil.png",
+    gradient: ["#a7f3d0", "#f0fdf4"]
   },
   {
-    id: "flowiiiii",
-    title: "Elviiiiiiiiis",
-    tags: ["Node.js", "AWS"],
-    desc: "Enterprise project management tool with AI-driven resource allocation.",
-    img: "/me/profil.png",
+    id: "portfolio",
+    title: "Ancien portfolio",
+    tags: ["javascript", "nextjs", "tailwindcss"],
+    desc: "Mon ancien portfolio tiré du template de Shubh Porwal 🌐",
+    gradient: ["#2f4f4f", "#556b2f"]
   },
 ]
 
@@ -80,10 +80,10 @@ const Projets = () => {
         <div className="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div className="space-y-4">
             <h2 className="text-primary text-sm font-bold tracking-widest uppercase">
-              05. Projects
+              05. Projets
             </h2>
             <h3 className="text-foreground-light/90 dark:text-foreground-dark/90 text-3xl font-black md:text-5xl">
-              Recent Work Showcase
+              Projets récents
             </h3>
           </div>
 
