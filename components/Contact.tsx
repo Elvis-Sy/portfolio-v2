@@ -13,18 +13,21 @@ const Contact = () => {
       <div className="mx-auto max-w-7xl px-6">
         <div className="bg-primary/5 relative overflow-hidden rounded-[3rem] border border-slate-300 p-8 shadow-sm md:p-16 dark:border-slate-800">
           <div className="bg-primary/10 absolute top-0 right-0 -mt-48 -mr-48 h-96 w-96 rounded-full blur-[120px]"></div>
-          <div className="relative z-10 grid gap-16 md:grid-cols-2 items-center">
+          <div className="relative z-10 grid items-center gap-16 md:grid-cols-2">
             <div className="space-y-8">
               <h2 className="text-primary text-sm font-bold tracking-widest uppercase">
                 06. Contact
               </h2>
+
               <h3 className="text-foreground-light/90 dark:text-foreground-dark/90 text-4xl leading-tight font-black md:text-5xl">
-                Ready to build something amazing?
+                Prêt à construire quelque chose d’exceptionnel ?
               </h3>
+
               <p className="text-foreground-light/80 dark:text-foreground-dark/80 text-lg">
-                Have a project in mind or just want to say hi? Send me a message
-                and let's discuss how we can work together.
+                Un projet en tête ? ou simplement envie d’échanger ? Envoyez-moi
+                un message et voyons comment collaborer efficacement.
               </p>
+
               <div className="space-y-6">
                 <div className="text-foreground-light/90 dark:text-foreground-dark/90 flex items-center gap-4">
                   <div className="text-primary flex size-12 items-center justify-center rounded-xl bg-slate-800">
@@ -32,11 +35,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-foreground-light/70 dark:text-foreground-dark/50 text-xs font-bold tracking-widest uppercase">
-                      Email Me
+                      Email
                     </p>
-                    <p className="text-lg font-semibold">
-                      elvissy04@gmail.com
-                    </p>
+                    <p className="text-lg font-semibold">elvissy04@gmail.com</p>
                   </div>
                 </div>
                 <div className="text-foreground-light/90 dark:text-foreground-dark/90 flex items-center gap-4">
@@ -45,7 +46,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-foreground-light/70 dark:text-foreground-dark/50 text-xs font-bold tracking-widest uppercase">
-                      Phone Number
+                      Téléphone
                     </p>
                     <p className="text-lg font-semibold">+261 34 67 658 16</p>
                   </div>
@@ -56,7 +57,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-foreground-light/70 dark:text-foreground-dark/50 text-xs font-bold tracking-widest uppercase">
-                      Location
+                      Localisation
                     </p>
                     <p className="text-lg font-semibold">
                       Fianarantsoa, Madagascar
@@ -95,29 +96,29 @@ const Contact = () => {
 
             <form className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
-                <Input label="First Name" placeholder="John" type="text" />
-                <Input label="Last Name" placeholder="Doe" type="text" />
+                <Input label="Prénom" placeholder="John" type="text" />
+                <Input label="Nom" placeholder="Doe" type="text" />
               </div>
 
               <Input
-                label="Email Address"
+                label="Adresse email"
                 placeholder="john@example.com"
                 type="email"
               />
 
               <Input
-                label="Your Message"
+                label="Votre message"
                 textarea
                 rows={4}
-                placeholder="How can I help you?"
+                placeholder="Comment puis-je vous aider ?"
               />
 
               <Button
                 className="bg-primary shadow-primary/20 flex w-full items-center justify-center gap-2 rounded-xl py-4 font-bold text-white shadow-lg transition-all hover:brightness-110"
                 type="submit"
               >
-                Send Message
-                <SendHorizonal/>
+                Envoyer
+                <SendHorizonal />
               </Button>
             </form>
           </div>

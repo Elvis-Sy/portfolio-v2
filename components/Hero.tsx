@@ -26,7 +26,7 @@ const Hero = () => {
           {/* TITLE */}
           <h1 className="text-foreground-light/90 dark:text-foreground-dark text-4xl leading-[1.1] font-black tracking-tight md:text-5xl">
             Transformer la{" "}
-            <span className="from-primary bg-gradient-to-r to-emerald-500 bg-clip-text text-transparent">
+            <span className="from-primary bg-linear-to-r to-emerald-500 bg-clip-text text-transparent">
               technologie
             </span>{" "}
             en solutions efficaces
@@ -37,7 +37,7 @@ const Hero = () => {
             <div className="bg-primary/10 absolute inset-0 -z-10 rounded-xl blur-xl"></div>
 
             <div className="border-primary/20 bg-background-light/60 dark:bg-background-dark/60 rounded-xl border px-6 py-4 text-xl font-bold backdrop-blur-md md:text-2xl">
-              <div className="from-primary bg-gradient-to-r to-emerald-500 bg-clip-text text-transparent">
+              <div className="from-primary bg-linear-to-r to-emerald-500 bg-clip-text text-transparent">
                 <Typewriter
                   options={{
                     strings: [
@@ -107,7 +107,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="from-background-light dark:from-background-dark absolute right-0 bottom-0 left-0 h-32 bg-gradient-to-t to-transparent"></div>
+      <div className="from-background-light dark:from-background-dark absolute right-0 bottom-0 left-0 h-32 bg-linear-to-t to-transparent"></div>
     </section>
   )
 }
