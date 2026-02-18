@@ -122,7 +122,7 @@ const ProjectCard = React.memo(({ project }: { project: Project }) => {
               href={project.href ?? "#"}
               className="text-primary inline-flex items-center gap-2 font-bold hover:underline"
             >
-              View Case Study
+              Voir informations
               <ArrowUpRightFromSquare size={18} />
             </Link>
           </div>
