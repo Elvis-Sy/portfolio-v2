@@ -91,7 +91,7 @@ const Hero = () => {
               />
             </div>
 
-            <div className="absolute -right-6 -bottom-6 rounded-2xl border border-slate-800 bg-slate-900 p-4 shadow-2xl">
+            <div className="absolute right-2 bottom-2 rounded-2xl border border-slate-800 bg-slate-900 p-4 shadow-2xl sm:-right-6 sm:-bottom-6">
               <div className="flex items-center gap-4">
                 <div className="bg-primary/10 text-primary rounded-lg p-2">
                   <span className="material-symbols-outlined">{t("verified")}</span>

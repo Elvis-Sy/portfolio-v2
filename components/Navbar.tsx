@@ -43,8 +43,12 @@ const Navbar = () => {
               {t(`links.${link.key}`)}
             </Link>
           ))}
-          <LangageSwitcher />
-          <SwitchTheme />
+          <div className="h-5 w-px bg-slate-300/70 dark:bg-slate-700/70" />
+          <div className="flex items-center gap-3">
+            <LangageSwitcher />
+            <SwitchTheme />
+          </div>
+          <div className="h-5 w-px bg-slate-300/70 dark:bg-slate-700/70" />
           <Button
             variant="primary"
             className="bg-primary shadow-primary/20 rounded-lg px-5 py-2 text-sm font-bold text-white shadow-lg transition-all hover:brightness-110"
@@ -55,8 +59,11 @@ const Navbar = () => {
 
         {/* Burger Button (Mobile) */}
         <div className="flex items-center gap-4 md:hidden">
-          <LangageSwitcher />
-          <SwitchTheme />
+          <div className="flex items-center gap-6">
+            <LangageSwitcher />
+            <SwitchTheme />
+          </div>
+          <div className="h-5 w-px bg-slate-300/70 dark:bg-slate-700/70" />
           <button
             className="p-2 text-slate-600 transition-colors dark:text-slate-300"
             onClick={() => setIsOpen(!isOpen)}

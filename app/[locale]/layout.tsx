@@ -25,7 +25,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className={isDark ? "dark" : ""} suppressHydrationWarning>
-      <body className={`${geistSans.className} ${geistMono.className} antialiased`}>
+      <body className={`${geistSans.className} ${geistMono.className} antialiased overflow-x-hidden`}>
         <RestoreScroll />
         {/* <-- Provider devient un client component */}
         <LocaleProvider locale={locale} messages={messages}>

@@ -10,11 +10,11 @@ const badgeLayout = [
     animation: "animate-float",
   },
   {
-    position: "top-1/2 -right-8 -translate-y-1/2",
+    position: "top-1/2 right-2 -translate-y-1/2 sm:-right-8",
     animation: "animate-float-delay",
   },
   {
-    position: "right-12 -bottom-6",
+    position: "right-4 bottom-2 sm:right-12 sm:-bottom-6",
     animation: "animate-float-slow",
   },
 ]
