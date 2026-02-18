@@ -1,28 +1,32 @@
 "use client"
 
-import React from "react"
 import { StarsIcon, File } from "lucide-react"
 import Button from "./ui/Button"
+import { useTranslations } from "next-intl"
 
-const badges = [
+const badgeLayout = [
   {
-    label: "Autonome",
     position: "-top-6 left-10",
     animation: "animate-float",
   },
   {
-    label: "Curieux",
     position: "top-1/2 -right-8 -translate-y-1/2",
     animation: "animate-float-delay",
   },
   {
-    label: "Methodique",
     position: "right-12 -bottom-6",
     animation: "animate-float-slow",
   },
 ]
 
 const About = () => {
+  const t = useTranslations("About")
+  const badgeLabels = t.raw("badges") as string[]
+  const badges = badgeLayout.map((badge, index) => ({
+    ...badge,
+    label: badgeLabels[index] ?? "",
+  }))
+
   return (
     <section
       className="bg-background-light dark:bg-background-dark py-24"
@@ -32,22 +36,18 @@ const About = () => {
         <div className="grid items-center gap-26 md:grid-cols-2 md:gap-16">
           <div className="space-y-6">
             <h2 className="text-primary text-sm font-bold tracking-widest uppercase">
-              01. A propos de moi
+              {t("sectionLabel")}
             </h2>
             <h3 className="text-foreground-light/90 dark:text-foreground-dark/90 relative text-3xl leading-tight font-black md:text-4xl">
-              Bonjour — Je m'appelle{" "}
+              {t("titlePrefix")}{" "}
               <span className="text-primary relative inline-block rotate-3 border bg-clip-text px-1 font-black shadow-[0_0_10px_rgba(34,197,94,0.7)]">
-                Elvis
+                {t("titleName")}
                 <StarsIcon className="absolute -top-3 -right-3 h-7 w-7 text-amber-400" />
               </span>{" "}
-              Sylvano
+              {t("titleSuffix")}
             </h3>
             <p className="text-foreground-light/80 dark:text-foreground-dark/80 text-lg leading-relaxed">
-              Je suis un développeur dévoué qui adore relever les défis et
-              étendre ses compétences sur différents projets. Ma curiosité me
-              permet de m'adapter rapidement aux nouvelles tendances pour
-              optimiser mes développements. Ainsi, je m'efforce de créer des
-              solutions performantes, évolutives et adaptées aux utilisateurs.
+              {t("description")}
             </p>
 
             <div className="flex items-center gap-8 pt-4 md:gap-10">
@@ -56,7 +56,7 @@ const About = () => {
                   8+
                 </span>
                 <p className="mt-1 text-xs font-medium text-slate-500 md:text-sm">
-                  Projets réalisés
+                  {t("statsLabel")}
                 </p>
               </div>
               <Button
@@ -64,7 +64,7 @@ const About = () => {
                 className="cursor-pointer space-x-2 p-4 text-xs md:text-sm"
               >
                 <File className="h-6 w-6" />
-                <span>Télécharger CV</span>
+                <span>{t("cvButton")}</span>
               </Button>
             </div>
           </div>
@@ -79,7 +79,7 @@ const About = () => {
                   muted
                   loop
                   playsInline
-                  preload="auto"
+                  preload="metadata"
                   poster="https://via.placeholder.com/800x450.png?text=Workspace+video"
                 />
               </div>

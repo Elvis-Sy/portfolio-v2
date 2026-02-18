@@ -13,9 +13,15 @@ type Project = {
   href?: string
 }
 
+type Props = {
+  project: Project
+  linkLabel: string
+  moreLabel: string
+}
+
 const MAX_VISIBLE_TAGS = 3
 
-const ProjectCard = React.memo(({ project }: { project: Project }) => {
+const ProjectCard = React.memo(({ project, linkLabel, moreLabel }: Props) => {
   const cardRef = useRef<HTMLDivElement>(null)
 
   const { visibleTags, hiddenCount, hiddenTagsLabel } = useMemo(() => {
@@ -31,6 +37,14 @@ const ProjectCard = React.memo(({ project }: { project: Project }) => {
 
   useEffect(() => {
     if (cardRef.current) {
+      if (
+        typeof window !== "undefined" &&
+        (window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+          !window.matchMedia("(pointer: fine)").matches)
+      ) {
+        return
+      }
+
       VanillaTilt.init(cardRef.current, {
         max: 10,
         speed: 400,
@@ -38,6 +52,12 @@ const ProjectCard = React.memo(({ project }: { project: Project }) => {
         "max-glare": 0.15,
         gyroscope: false,
       })
+    }
+    return () => {
+      const anyCard = cardRef.current as HTMLElement & {
+        vanillaTilt?: { destroy?: () => void }
+      }
+      anyCard?.vanillaTilt?.destroy?.()
     }
   }, [])
 
@@ -64,7 +84,7 @@ const ProjectCard = React.memo(({ project }: { project: Project }) => {
           className="pointer-events-none absolute inset-0 object-cover opacity-20"
         />
 
-        {/* IMAGE INCLINÉE */}
+        {/* IMAGE INCLINEE */}
         <Image
           src={`/projects/${project.id}.png`}
           alt={project.title}
@@ -104,13 +124,15 @@ const ProjectCard = React.memo(({ project }: { project: Project }) => {
                   title={hiddenTagsLabel}
                   className="border-primary cursor-pointer flex max-w-full items-center gap-2 rounded-full border-2 bg-slate-900 px-3 py-1.5 font-medium text-slate-300"
                 >
-                  +{hiddenCount} autre(s)
+                  +{hiddenCount} {moreLabel}
                 </span>
               )}
             </div>
 
             {/* TITLE */}
-            <h4 className="text-2xl font-bold transition-transform duration-500 translate-y-10 group-hover:translate-y-0 text-white">{project.title}</h4>
+            <h4 className="text-2xl font-bold transition-transform duration-500 translate-y-10 group-hover:translate-y-0 text-white">
+              {project.title}
+            </h4>
 
             {/* DESCRIPTION */}
             <p className="line-clamp-2 text-sm text-slate-300 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
@@ -122,7 +144,7 @@ const ProjectCard = React.memo(({ project }: { project: Project }) => {
               href={project.href ?? "#"}
               className="text-primary inline-flex items-center gap-2 font-bold hover:underline"
             >
-              Voir informations
+              {linkLabel}
               <ArrowUpRightFromSquare size={18} />
             </Link>
           </div>

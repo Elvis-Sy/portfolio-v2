@@ -1,10 +1,14 @@
-import React from "react"
+"use client"
+
 import Input from "./ui/Input"
 import Button from "./ui/Button"
 import { Mail, MapPin, Phone, SendHorizonal } from "lucide-react"
 import Link from "next/link"
+import { useTranslations } from "next-intl"
 
 const Contact = () => {
+  const t = useTranslations("Contact")
+
   return (
     <section
       className="bg-background-light dark:bg-background-dark py-24"
@@ -16,16 +20,15 @@ const Contact = () => {
           <div className="relative z-10 grid items-center gap-16 md:grid-cols-2">
             <div className="space-y-8">
               <h2 className="text-primary text-sm font-bold tracking-widest uppercase">
-                06. Contact
+                {t("sectionLabel")}
               </h2>
 
               <h3 className="text-foreground-light/90 dark:text-foreground-dark/90 text-4xl leading-tight font-black md:text-5xl">
-                Prêt à construire quelque chose d’exceptionnel ?
+                {t("sectionTitle")}
               </h3>
 
               <p className="text-foreground-light/80 dark:text-foreground-dark/80 text-lg">
-                Un projet en tête ? ou simplement envie d’échanger ? Envoyez-moi
-                un message et voyons comment collaborer efficacement.
+                {t("sectionDesc")}
               </p>
 
               <div className="space-y-6">
@@ -35,7 +38,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-foreground-light/70 dark:text-foreground-dark/50 text-xs font-bold tracking-widest uppercase">
-                      Email
+                      {t("emailLabel")}
                     </p>
                     <p className="text-lg font-semibold">elvissy04@gmail.com</p>
                   </div>
@@ -46,7 +49,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-foreground-light/70 dark:text-foreground-dark/50 text-xs font-bold tracking-widest uppercase">
-                      Téléphone
+                      {t("phoneLabel")}
                     </p>
                     <p className="text-lg font-semibold">+261 34 67 658 16</p>
                   </div>
@@ -57,7 +60,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-foreground-light/70 dark:text-foreground-dark/50 text-xs font-bold tracking-widest uppercase">
-                      Localisation
+                      {t("locationLabel")}
                     </p>
                     <p className="text-lg font-semibold">
                       Fianarantsoa, Madagascar
@@ -96,28 +99,36 @@ const Contact = () => {
 
             <form className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
-                <Input label="Prénom" placeholder="John" type="text" />
-                <Input label="Nom" placeholder="Doe" type="text" />
+                <Input
+                  label={t("formFirstName")}
+                  placeholder={t("placeholderFirstName")}
+                  type="text"
+                />
+                <Input
+                  label={t("formLastName")}
+                  placeholder={t("placeholderLastName")}
+                  type="text"
+                />
               </div>
 
               <Input
-                label="Adresse email"
-                placeholder="john@example.com"
+                label={t("formEmail")}
+                placeholder={t("placeholderEmail")}
                 type="email"
               />
 
               <Input
-                label="Votre message"
+                label={t("formMessage")}
                 textarea
                 rows={4}
-                placeholder="Comment puis-je vous aider ?"
+                placeholder={t("placeholderMessage")}
               />
 
               <Button
                 className="bg-primary shadow-primary/20 flex w-full items-center justify-center gap-2 rounded-xl py-4 font-bold text-white shadow-lg transition-all hover:brightness-110"
                 type="submit"
               >
-                Envoyer
+                {t("submitButton")}
                 <SendHorizonal />
               </Button>
             </form>

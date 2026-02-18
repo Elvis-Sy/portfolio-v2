@@ -1,0 +1,213 @@
+{
+  "Hero": {
+    "status": "Disponible pour nouveaux projets",
+    "titlePrefix": "Transformer la",
+    "titleHighlight": "technologie",
+    "titleSuffix": "en solutions efficaces",
+    "typewriter": [
+      "Développeur web Full-Stack",
+      "Ingénieur DevOps Junior"
+    ],
+    "projectsButton": "Voir mes projets",
+    "contactButton": "Contactez-moi",
+    "experienceLabel": "Expérience",
+    "experienceValue": "+4 ans",
+    "altPortrait": "Portrait Elvis Sylvano",
+    "verified": "Vérifié"
+  },
+  "Navbar": {
+    "links": {
+      "home": "Accueil",
+      "about": "À propos",
+      "experience": "Expériences",
+      "skills": "Compétences",
+      "projects": "Projets"
+    },
+    "contactCta": "Contact",
+    "hireMe": "Contact"
+  },
+  "About": {
+    "sectionLabel": "01. À propos de moi",
+    "titlePrefix": "Bonjour — Je m'appelle",
+    "titleName": "Elvis",
+    "titleSuffix": "Sylvano",
+    "description": "Je suis un développeur dévoué qui adore relever les défis et étendre ses compétences sur différents projets. Ma curiosité me permet de m'adapter rapidement aux nouvelles tendances pour optimiser mes développements. Ainsi, je m'efforce de créer des solutions performantes, évolutives et adaptées aux utilisateurs.",
+    "badges": [
+      "Autonome",
+      "Curieux",
+      "Méthodique"
+    ],
+    "statsLabel": "Projets réalisés",
+    "cvButton": "Télécharger CV"
+  },
+  "Experience": {
+    "sectionLabel": "02. Parcours",
+    "sectionTitle": "Études & Expérience",
+    "items": [
+      {
+        "id": "student",
+        "title": "Étudiant en Master",
+        "company": "École Nationale d'Informatique",
+        "date": "2025 - Présent",
+        "bullets": [
+          "Approfondissement des architectures logicielles avancées et des systèmes distribués.",
+          "Réalisation de projets académiques orientés performance et conception d'applications évolutives."
+        ]
+      },
+      {
+        "id": "bachelor",
+        "title": "Licence en Informatique",
+        "company": "École Nationale d'Informatique",
+        "date": "2025",
+        "bullets": [
+          "Obtention d'une Licence en Informatique dans le parcours \"Génie logiciel et Bases de données\".",
+          "Acquisition de solides bases en algorithmique, structures de données et génie logiciel."
+        ]
+      },
+      {
+        "id": "stage1",
+        "title": "Stagiaire Développeur web",
+        "company": "Société du Port à gestion Autonome de Toamasina (SPAT)",
+        "date": "Sept - Déc 2024",
+        "bullets": [
+          "Développement d'une plateforme de gestion des congés permettant la demande, l'approbation et le suivi des congés avec Next.js, NestJS et MySQL.",
+          "Modélisation d'une base de données relationnelle (employés, demandes, approbations,...).",
+          "Implémentation d'API REST avec authentification basée sur un RBAC et JWT."
+        ]
+      },
+      {
+        "id": "stage2",
+        "title": "Stagiaire Développeur web",
+        "company": "Société de Manutention de Marchandises Conventionnelles (SMMC)",
+        "date": "Août - Nov 2023",
+        "bullets": [
+          "Conception et développement d'une application web de suivi des entrées et sorties des visiteurs avec HTML, CSS et JSP.",
+          "Mise en place d'un tableau de bord administratif pour visualiser et gérer les flux de visiteurs, permettant une réduction des erreurs d'enregistrement."
+        ]
+      }
+    ]
+  },
+  "Skills": {
+    "sectionTitle": "03. Compétences Techniques"
+  },
+  "Expertises": {
+    "sectionTitle": "Expertise en solutions digitales",
+    "sectionDesc": "Je développe des solutions digitales complètes, de la conception à la mise en production, en combinant design, performance et scalabilité.",
+    "items": [
+      {
+        "id": "frontend",
+        "title": "Frontend",
+        "desc": "Création d'interfaces interactives et ergonomiques centrées utilisateur"
+      },
+      {
+        "id": "backend",
+        "title": "Backend",
+        "desc": "Conception d'architectures serveur robustes et performantes"
+      },
+      {
+        "id": "cloud",
+        "title": "Cloud & DevOps",
+        "desc": "Déploiement d'infrastructures scalables et automatisation des flux"
+      },
+      {
+        "id": "design",
+        "title": "Design UI/UX",
+        "desc": "Conception d'expériences utilisateur intuitives et visuellement attrayantes"
+      }
+    ]
+  },
+  "Proficiencies": {
+    "sectionTitle": "Maîtrises Techniques",
+    "categories": [
+      {
+        "id": "languages",
+        "title": "Langages",
+        "items": [
+          "JavaScript (ES6+)",
+          "TypeScript",
+          "Python",
+          "HTML5/CSS3"
+        ]
+      },
+      {
+        "id": "frameworks",
+        "title": "Frameworks",
+        "items": [
+          "React / Next.js",
+          "Node.js",
+          "Express.js",
+          "NestJS",
+          "Django",
+          "FastAPI",
+          "Tailwind CSS / DaisyUI"
+        ]
+      },
+      {
+        "id": "databases",
+        "title": "Bases de données",
+        "items": [
+          "PostgreSQL",
+          "MongoDB",
+          "MySQL",
+          "Supabase"
+        ]
+      },
+      {
+        "id": "tools",
+        "title": "Outils",
+        "items": [
+          "Git / GitHub",
+          "Docker",
+          "AWS (S3, EC2)",
+          "Figma"
+        ]
+      }
+    ]
+  },
+  "Projets": {
+    "sectionLabel": "05. Projets",
+    "sectionTitle": "Projets récents",
+    "prevAria": "Projet précédent",
+    "nextAria": "Projet suivant",
+    "linkLabel": "Voir informations",
+    "moreLabel": "autre(s)",
+    "projects": {
+      "flotmax": {
+        "title": "FlotMax",
+        "desc": "Application aidant pour les problèmes de flot maximal"
+      },
+      "moodspace": {
+        "title": "MoodSpace",
+        "desc": "Plateforme web conçue pour aider à suivre l'humeur"
+      },
+      "portfolio-2": {
+        "title": "Portfolio V2",
+        "desc": "Mon portfolio actuel construit avec Next.js et Tailwind CSS"
+      },
+      "portfolio": {
+        "title": "Ancien portfolio",
+        "desc": "Mon ancien portfolio tiré du template de Shubh Porwal"
+      }
+    }
+  },
+  "Contact": {
+    "sectionLabel": "06. Contact",
+    "sectionTitle": "Prêt à construire quelque chose d’exceptionnel ?",
+    "sectionDesc": "Un projet en tête ? ou simplement envie d’échanger ? Envoyez-moi un message et voyons comment collaborer efficacement.",
+    "emailLabel": "Email",
+    "phoneLabel": "Téléphone",
+    "locationLabel": "Localisation",
+    "formFirstName": "Prénom",
+    "formLastName": "Nom",
+    "formEmail": "Adresse email",
+    "formMessage": "Votre message",
+    "placeholderFirstName": "John",
+    "placeholderLastName": "Doe",
+    "placeholderEmail": "john@example.com",
+    "placeholderMessage": "Comment puis-je vous aider ?",
+    "submitButton": "Envoyer"
+  },
+  "Footer": {
+    "copyright": "© {year} Portfolio - Elvis Sylvano."
+  }
+}

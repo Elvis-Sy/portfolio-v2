@@ -1,0 +1,213 @@
+{
+  "Hero": {
+    "status": "Available for new projects",
+    "titlePrefix": "Transform",
+    "titleHighlight": "technology",
+    "titleSuffix": "into effective solutions",
+    "typewriter": [
+      "Full-Stack Web Developer",
+      "Junior DevOps Engineer"
+    ],
+    "projectsButton": "View my projects",
+    "contactButton": "Contact me",
+    "experienceLabel": "Experience",
+    "experienceValue": "+4 yrs",
+    "altPortrait": "Portrait Elvis Sylvano",
+    "verified": "Verified"
+  },
+  "Navbar": {
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "experience": "Experience",
+      "skills": "Skills",
+      "projects": "Projects"
+    },
+    "contactCta": "Contact",
+    "hireMe": "Contact"
+  },
+  "About": {
+    "sectionLabel": "01. About me",
+    "titlePrefix": "Hello — My name is",
+    "titleName": "Elvis",
+    "titleSuffix": "Sylvano",
+    "description": "I am a dedicated developer who enjoys taking on challenges and expanding skills across diverse projects. My curiosity helps me adapt quickly to new trends and optimize my work. I strive to build performant, scalable solutions tailored to users.",
+    "badges": [
+      "Autonomous",
+      "Curious",
+      "Methodical"
+    ],
+    "statsLabel": "Projects completed",
+    "cvButton": "Download CV"
+  },
+  "Experience": {
+    "sectionLabel": "02. Journey",
+    "sectionTitle": "Education & Experience",
+    "items": [
+      {
+        "id": "student",
+        "title": "Master's Student",
+        "company": "National School of Computer Science",
+        "date": "2025 - Present",
+        "bullets": [
+          "Deepening advanced software architectures and distributed systems.",
+          "Academic projects focused on performance and scalable application design."
+        ]
+      },
+      {
+        "id": "bachelor",
+        "title": "Bachelor's in Computer Science",
+        "company": "National School of Computer Science",
+        "date": "2025",
+        "bullets": [
+          "Earned a Bachelor's in Computer Science in the \"Software Engineering and Databases\" track.",
+          "Built strong foundations in algorithms, data structures, and software engineering."
+        ]
+      },
+      {
+        "id": "stage1",
+        "title": "Web Developer Intern",
+        "company": "Société du Port à gestion Autonome de Toamasina (SPAT)",
+        "date": "Sept - Dec 2024",
+        "bullets": [
+          "Built a leave management platform covering requests, approvals, and tracking with Next.js, NestJS, and MySQL.",
+          "Modeled a relational database (employees, requests, approvals,...).",
+          "Implemented REST APIs with RBAC- and JWT-based authentication."
+        ]
+      },
+      {
+        "id": "stage2",
+        "title": "Web Developer Intern",
+        "company": "Société de Manutention de Marchandises Conventionnelles (SMMC)",
+        "date": "Aug - Nov 2023",
+        "bullets": [
+          "Designed and developed a visitor check-in/out tracking web app with HTML, CSS, and JSP.",
+          "Delivered an admin dashboard to visualize and manage visitor flows, reducing entry errors."
+        ]
+      }
+    ]
+  },
+  "Skills": {
+    "sectionTitle": "03. Technical Skills"
+  },
+  "Expertises": {
+    "sectionTitle": "Expertise in Digital Solutions",
+    "sectionDesc": "I build complete digital solutions, from design to production, combining design, performance, and scalability.",
+    "items": [
+      {
+        "id": "frontend",
+        "title": "Frontend",
+        "desc": "Building interactive, ergonomic, user-centered interfaces"
+      },
+      {
+        "id": "backend",
+        "title": "Backend",
+        "desc": "Designing robust, high-performance server architectures"
+      },
+      {
+        "id": "cloud",
+        "title": "Cloud & DevOps",
+        "desc": "Deploying scalable infrastructure and automating delivery flows"
+      },
+      {
+        "id": "design",
+        "title": "UI/UX Design",
+        "desc": "Designing intuitive and visually appealing user experiences"
+      }
+    ]
+  },
+  "Proficiencies": {
+    "sectionTitle": "Technical Proficiencies",
+    "categories": [
+      {
+        "id": "languages",
+        "title": "Languages",
+        "items": [
+          "JavaScript (ES6+)",
+          "TypeScript",
+          "Python",
+          "HTML5/CSS3"
+        ]
+      },
+      {
+        "id": "frameworks",
+        "title": "Frameworks",
+        "items": [
+          "React / Next.js",
+          "Node.js",
+          "Express.js",
+          "NestJS",
+          "Django",
+          "FastAPI",
+          "Tailwind CSS / DaisyUI"
+        ]
+      },
+      {
+        "id": "databases",
+        "title": "Databases",
+        "items": [
+          "PostgreSQL",
+          "MongoDB",
+          "MySQL",
+          "Supabase"
+        ]
+      },
+      {
+        "id": "tools",
+        "title": "Tools",
+        "items": [
+          "Git / GitHub",
+          "Docker",
+          "AWS (S3, EC2)",
+          "Figma"
+        ]
+      }
+    ]
+  },
+  "Projets": {
+    "sectionLabel": "05. Projects",
+    "sectionTitle": "Recent projects",
+    "prevAria": "Previous project",
+    "nextAria": "Next project",
+    "linkLabel": "View details",
+    "moreLabel": "more",
+    "projects": {
+      "flotmax": {
+        "title": "FlotMax",
+        "desc": "An app to help with maximum flow problems"
+      },
+      "moodspace": {
+        "title": "MoodSpace",
+        "desc": "Web platform designed to help track mood"
+      },
+      "portfolio-2": {
+        "title": "Portfolio V2",
+        "desc": "My current portfolio built with Next.js and Tailwind CSS"
+      },
+      "portfolio": {
+        "title": "Previous portfolio",
+        "desc": "My previous portfolio based on the Shubh Porwal template"
+      }
+    }
+  },
+  "Contact": {
+    "sectionLabel": "06. Contact",
+    "sectionTitle": "Ready to build something exceptional?",
+    "sectionDesc": "Have a project in mind or just want to talk? Send me a message and let's see how we can work together.",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "locationLabel": "Location",
+    "formFirstName": "First name",
+    "formLastName": "Last name",
+    "formEmail": "Email address",
+    "formMessage": "Your message",
+    "placeholderFirstName": "John",
+    "placeholderLastName": "Doe",
+    "placeholderEmail": "john@example.com",
+    "placeholderMessage": "How can I help you?",
+    "submitButton": "Send"
+  },
+  "Footer": {
+    "copyright": "© {year} Portfolio - Elvis Sylvano."
+  }
+}

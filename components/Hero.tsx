@@ -4,8 +4,12 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import Typewriter from "typewriter-effect"
 import Image from "next/image"
+import { useTranslations } from "next-intl"
 
 const Hero = () => {
+  const t = useTranslations("Hero")
+  const typewriterStrings = t.raw("typewriter") as string[]
+
   return (
     <section
       className="pattern-section relative flex min-h-screen items-center py-24 pt-20"
@@ -20,16 +24,16 @@ const Hero = () => {
               <span className="bg-primary absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"></span>
               <span className="bg-primary relative inline-flex h-2 w-2 rounded-full"></span>
             </span>
-            Disponible pour nouveaux projets
+            {t("status")}
           </div>
 
           {/* TITLE */}
           <h1 className="text-foreground-light/90 dark:text-foreground-dark text-4xl leading-[1.1] font-black tracking-tight md:text-5xl">
-            Transformer la{" "}
+            {t("titlePrefix")}{" "}
             <span className="from-primary bg-linear-to-r to-emerald-500 bg-clip-text text-transparent">
-              technologie
+              {t("titleHighlight")}
             </span>{" "}
-            en solutions efficaces
+            {t("titleSuffix")}
           </h1>
 
           {/* TYPEWRITER MIS EN AVANT */}
@@ -40,10 +44,7 @@ const Hero = () => {
               <div className="from-primary bg-linear-to-r to-emerald-500 bg-clip-text text-transparent">
                 <Typewriter
                   options={{
-                    strings: [
-                      "Développeur web Full-Stack",
-                      "Ingénieur DevOps Junior",
-                    ],
+                    strings: [...typewriterStrings],
                     autoStart: true,
                     loop: true,
                     cursor: " <",
@@ -62,7 +63,7 @@ const Hero = () => {
               className="bg-primary shadow-primary/30 flex items-center gap-2 rounded-xl px-8 py-4 font-bold text-white shadow-sm transition-all hover:scale-105"
               href="#projects"
             >
-              Voir mes projets
+              {t("projectsButton")}
               <ArrowRight />
             </Link>
 
@@ -70,7 +71,7 @@ const Hero = () => {
               className="rounded-xl border border-slate-700 bg-slate-800 px-8 py-4 font-bold text-white backdrop-blur-sm transition-all hover:bg-slate-700"
               href="#contact"
             >
-              Contactez-moi
+              {t("contactButton")}
             </Link>
           </div>
         </div>
@@ -82,7 +83,7 @@ const Hero = () => {
 
             <div className="bg-background-light dark:bg-background-dark absolute inset-0 -rotate-3 overflow-hidden rounded-4xl border border-slate-200 shadow-2xl dark:border-slate-800">
               <Image
-                alt="Portrait Elvis Sylvano"
+                alt={t("altPortrait")}
                 fill
                 className="object-cover grayscale transition-all duration-700 hover:grayscale-0"
                 src="/me/profil.jpg"
@@ -93,13 +94,15 @@ const Hero = () => {
             <div className="absolute -right-6 -bottom-6 rounded-2xl border border-slate-800 bg-slate-900 p-4 shadow-2xl">
               <div className="flex items-center gap-4">
                 <div className="bg-primary/10 text-primary rounded-lg p-2">
-                  <span className="material-symbols-outlined">Vérifié</span>
+                  <span className="material-symbols-outlined">{t("verified")}</span>
                 </div>
                 <div>
                   <p className="text-xs font-medium text-slate-500">
-                    Expérience
+                    {t("experienceLabel")}
                   </p>
-                  <p className="text-sm font-bold text-white">+4 ans</p>
+                  <p className="text-sm font-bold text-white">
+                    {t("experienceValue")}
+                  </p>
                 </div>
               </div>
             </div>

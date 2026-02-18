@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react"
 import { Sun, Moon } from "lucide-react"
 
-const STORAGE_KEY = "light";
+const STORAGE_KEY = "theme";
 
 export default function SwitchTheme() {
   const [isDark, setIsDark] = useState<boolean>(() => {
