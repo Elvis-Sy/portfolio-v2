@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { cookies } from "next/headers";
 import { locales } from "@/i18n/request";
 import LocaleProvider from "@/components/LocaleProvider";
 import RestoreScroll from "@/components/RestoreScroll";
@@ -18,9 +19,12 @@ export default async function LocaleLayout({ children, params }: Props) {
   if (!locales.includes(locale)) notFound();
 
   const messages = await getMessages({ locale });
+  const cookieStore = await cookies();
+  const themeCookie = cookieStore.get("theme")?.value;
+  const isDark = themeCookie === "dark";
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={isDark ? "dark" : ""} suppressHydrationWarning>
       <body className={`${geistSans.className} ${geistMono.className} antialiased`}>
         <RestoreScroll />
         {/* <-- Provider devient un client component */}

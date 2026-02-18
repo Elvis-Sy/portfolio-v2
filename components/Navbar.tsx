@@ -55,6 +55,7 @@ const Navbar = () => {
 
         {/* Burger Button (Mobile) */}
         <div className="flex items-center gap-4 md:hidden">
+          <LangageSwitcher />
           <SwitchTheme />
           <button
             className="p-2 text-slate-600 transition-colors dark:text-slate-300"
