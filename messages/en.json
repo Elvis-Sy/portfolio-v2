@@ -209,5 +209,210 @@
   },
   "Footer": {
     "copyright": "© {year} Portfolio - Elvis Sylvano."
+  },
+  "ProjectDetails": {
+    "common": {
+      "badge": "Case Study",
+      "backToPortfolio": "Back to portfolio",
+      "liveDemo": "Live demo",
+      "sourceCode": "Source code",
+      "techUsed": "Technologies used",
+      "overviewLabel": "01. Overview",
+      "challengeTitle": "The challenge",
+      "solutionTitle": "The solution",
+      "featuresTitle": "Key features",
+      "statsLabel": "Impact & Results",
+      "timelineLabel": "Timeline",
+      "roleLabel": "Role",
+      "industryLabel": "Industry",
+      "ctaLabel": "Request similar project",
+      "nextProjectLabel": "Next project"
+    },
+    "projects": {
+      "flotmax": {
+        "summary": "Educational platform to solve, simulate, and visualize maximum-flow problems with a fast and focused interface.",
+        "challenge": "Students struggled to understand algorithm steps and manually validate their final maximum-flow results.",
+        "challengePoints": [
+          "Limited visibility into augmenting paths.",
+          "Too much repetitive paper calculation.",
+          "Hard to compare multiple solving strategies."
+        ],
+        "solution": "We built an interactive interface to draw graphs, run computations, and inspect each algorithm iteration.",
+        "solutionHighlight": "The platform improved algorithm understanding and reduced completion time for complex exercises.",
+        "features": [
+          {
+            "title": "Step-by-step simulation",
+            "desc": "Detailed iteration rendering to inspect each capacity update."
+          },
+          {
+            "title": "Graph editor",
+            "desc": "Fast node and edge editing with constraint-aware controls."
+          },
+          {
+            "title": "Result export",
+            "desc": "Exportable summaries for revision and presentation."
+          },
+          {
+            "title": "Auto validation",
+            "desc": "Automatic answer checks with model inconsistency detection."
+          }
+        ],
+        "stats": [
+          {
+            "value": "40%",
+            "label": "Time saved"
+          },
+          {
+            "value": "3x",
+            "label": "More test cases"
+          },
+          {
+            "value": "95%",
+            "label": "User satisfaction"
+          }
+        ],
+        "timeline": "6 weeks",
+        "role": "Full-stack dev",
+        "industry": "Education"
+      },
+      "moodspace": {
+        "summary": "Mood tracking app with time-based visual analytics to help users better understand emotional patterns.",
+        "challenge": "Users lacked simple tools to log mood consistently and extract practical insights from their data.",
+        "challengePoints": [
+          "Emotional data was fragmented.",
+          "Low retention on traditional apps.",
+          "Limited actionable insights."
+        ],
+        "solution": "We designed a lightweight journaling flow with reminders, weekly charts, and contextual suggestions.",
+        "solutionHighlight": "Weekly engagement improved significantly thanks to simpler UX and immediate value feedback.",
+        "features": [
+          {
+            "title": "Daily tracking",
+            "desc": "Mood logging in a few seconds with minimal friction."
+          },
+          {
+            "title": "Trend charts",
+            "desc": "Clear evolution views for 7, 30, and 90-day windows."
+          },
+          {
+            "title": "Reflective notes",
+            "desc": "Optional context notes to enrich emotional understanding."
+          },
+          {
+            "title": "Smart reminders",
+            "desc": "Personalized prompts based on behavior and usage cadence."
+          }
+        ],
+        "stats": [
+          {
+            "value": "52%",
+            "label": "30d retention"
+          },
+          {
+            "value": "4.7/5",
+            "label": "Average rating"
+          },
+          {
+            "value": "2x",
+            "label": "Weekly sessions"
+          }
+        ],
+        "timeline": "8 weeks",
+        "role": "Frontend lead",
+        "industry": "HealthTech"
+      },
+      "portfolio-2": {
+        "summary": "Second portfolio version focused on performance, modularity, and clearer storytelling for project showcases.",
+        "challenge": "The previous site had limited scalability for detailed case studies and iterative content updates.",
+        "challengePoints": [
+          "Low component modularity.",
+          "Hard-to-maintain section composition.",
+          "No dedicated project detail pages."
+        ],
+        "solution": "Complete rebuild with Next.js App Router, reusable components, and a cleaner information architecture.",
+        "solutionHighlight": "The new version supports faster iteration and makes technical achievements easier to communicate.",
+        "features": [
+          {
+            "title": "Consistent design system",
+            "desc": "Unified component language for visual and UX consistency."
+          },
+          {
+            "title": "Built-in i18n",
+            "desc": "Bilingual content management through locale-based messages."
+          },
+          {
+            "title": "Balanced motion",
+            "desc": "Smooth interactions without sacrificing performance."
+          },
+          {
+            "title": "Project case pages",
+            "desc": "Dedicated pages to present challenge, solution, and impact."
+          }
+        ],
+        "stats": [
+          {
+            "value": "95+",
+            "label": "Lighthouse perf"
+          },
+          {
+            "value": "100%",
+            "label": "Responsive coverage"
+          },
+          {
+            "value": "-35%",
+            "label": "Duplicate code"
+          }
+        ],
+        "timeline": "4 weeks",
+        "role": "Product engineer",
+        "industry": "Personal brand"
+      },
+      "portfolio": {
+        "summary": "First portfolio release used to shape my public positioning and publish my initial project selection.",
+        "challenge": "Ship a professional online presence quickly while keeping a clean and modern visual identity.",
+        "challengePoints": [
+          "Short delivery timeline.",
+          "Evolving content scope.",
+          "Need for an easy-to-maintain base."
+        ],
+        "solution": "Delivered a first version centered on clarity with essential sections and a modern frontend stack.",
+        "solutionHighlight": "That baseline generated strong feedback and prepared the migration path to Portfolio V2.",
+        "features": [
+          {
+            "title": "Clear landing",
+            "desc": "Direct presentation of profile, skills, and contact info."
+          },
+          {
+            "title": "Essential sections",
+            "desc": "Experience, projects, and contact available in one flow."
+          },
+          {
+            "title": "Modern theme",
+            "desc": "Cohesive palette and typography for a professional tone."
+          },
+          {
+            "title": "Reusable base",
+            "desc": "Technical foundation later reused for V2."
+          }
+        ],
+        "stats": [
+          {
+            "value": "1.5s",
+            "label": "Load time"
+          },
+          {
+            "value": "20+",
+            "label": "Feedback received"
+          },
+          {
+            "value": "3",
+            "label": "Major iterations"
+          }
+        ],
+        "timeline": "3 weeks",
+        "role": "Frontend dev",
+        "industry": "Personal brand"
+      }
+    }
   }
 }

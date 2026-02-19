@@ -15,7 +15,7 @@ const Contact = () => {
       id="contact"
     >
       <div className="mx-auto max-w-7xl">
-        <div className="bg-primary/5 relative overflow-hidden rounded-[3rem] border border-slate-300 p-8 shadow-sm md:p-16 dark:border-slate-800">
+        <div className="bg-primary/5 relative overflow-hidden rounded-[3rem] border border-slate-300 p-8 shadow-sm md:p-12 dark:border-slate-800">
           <div className="bg-primary/10 absolute top-0 right-0 -mt-48 -mr-48 h-96 w-96 rounded-full blur-[120px]"></div>
           <div className="relative z-10 grid items-center gap-16 md:grid-cols-2">
             <div className="space-y-8">

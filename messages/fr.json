@@ -209,5 +209,210 @@
   },
   "Footer": {
     "copyright": "© {year} Portfolio - Elvis Sylvano."
+  },
+  "ProjectDetails": {
+    "common": {
+      "badge": "Etude de cas",
+      "backToPortfolio": "Retour portfolio",
+      "liveDemo": "Demo live",
+      "sourceCode": "Code source",
+      "techUsed": "Technologies utilisees",
+      "overviewLabel": "01. Vue generale",
+      "challengeTitle": "Le challenge",
+      "solutionTitle": "La solution",
+      "featuresTitle": "Fonctionnalites cle",
+      "statsLabel": "Impact & Resultats",
+      "timelineLabel": "Duree",
+      "roleLabel": "Role",
+      "industryLabel": "Secteur",
+      "ctaLabel": "Demander une variante",
+      "nextProjectLabel": "Projet suivant"
+    },
+    "projects": {
+      "flotmax": {
+        "summary": "Plateforme pedagogique pour resoudre, simuler et visualiser les problemes de flot maximal avec une interface simple et rapide.",
+        "challenge": "Les etudiants avaient du mal a comprendre les etapes des algorithmes de flot maximal et a verifier les resultats manuellement.",
+        "challengePoints": [
+          "Visualisation limitee des chemins augmentants.",
+          "Beaucoup de calculs repetitifs sur papier.",
+          "Difficulte a comparer plusieurs strategies de resolution."
+        ],
+        "solution": "Une interface interactive a ete creee pour dessiner les graphes, lancer les calculs et afficher les etapes de chaque iteration.",
+        "solutionHighlight": "La solution a accelere la comprehension des algorithmes et reduit le temps de resolution des exercices complexes.",
+        "features": [
+          {
+            "title": "Simulation pas-a-pas",
+            "desc": "Affichage detaille des iterations pour suivre chaque mise a jour de capacite."
+          },
+          {
+            "title": "Edition de graphe",
+            "desc": "Ajout/suppression rapide de noeuds et d aretes avec controles de contraintes."
+          },
+          {
+            "title": "Export des resultats",
+            "desc": "Generation de rapports exploitables pour revision ou presentation."
+          },
+          {
+            "title": "Verification automatique",
+            "desc": "Validation des reponses et detection des incoherences de modelisation."
+          }
+        ],
+        "stats": [
+          {
+            "value": "40%",
+            "label": "Temps gagne"
+          },
+          {
+            "value": "3x",
+            "label": "Plus de cas testes"
+          },
+          {
+            "value": "95%",
+            "label": "Satisfaction utilisateurs"
+          }
+        ],
+        "timeline": "6 semaines",
+        "role": "Full-stack dev",
+        "industry": "Education"
+      },
+      "moodspace": {
+        "summary": "Application de suivi d humeur avec visualisations temporelles pour aider les utilisateurs a mieux comprendre leurs cycles emotionnels.",
+        "challenge": "Les utilisateurs manquaient d outils simples pour enregistrer leur humeur et identifier des tendances exploitables.",
+        "challengePoints": [
+          "Donnees emotionnelles dispersees.",
+          "Faible adherence sur les apps classiques.",
+          "Peu d insights concrets au quotidien."
+        ],
+        "solution": "Creation d un parcours ultra-simple de saisie avec rappels, graphiques hebdomadaires et recommandations contextuelles.",
+        "solutionHighlight": "Le taux d engagement hebdomadaire a nettement augmente grace a une UX plus legere et des retours immediats.",
+        "features": [
+          {
+            "title": "Tracking quotidien",
+            "desc": "Enregistrement rapide de l humeur en quelques secondes."
+          },
+          {
+            "title": "Courbes evolutives",
+            "desc": "Lecture claire des tendances sur 7, 30 et 90 jours."
+          },
+          {
+            "title": "Journal reflexif",
+            "desc": "Ajout de notes pour enrichir le contexte emotionnel."
+          },
+          {
+            "title": "Alertes intelligentes",
+            "desc": "Rappels personnalises selon comportement et frequence d usage."
+          }
+        ],
+        "stats": [
+          {
+            "value": "52%",
+            "label": "Retention 30j"
+          },
+          {
+            "value": "4.7/5",
+            "label": "Note moyenne"
+          },
+          {
+            "value": "2x",
+            "label": "Sessions hebdo"
+          }
+        ],
+        "timeline": "8 semaines",
+        "role": "Frontend lead",
+        "industry": "HealthTech"
+      },
+      "portfolio-2": {
+        "summary": "Deuxieme version de mon portfolio avec accent sur performances, modularite et meilleure presentation des projets.",
+        "challenge": "Le site precedent etait limite pour presenter des cas pratiques detailles et evoluer facilement.",
+        "challengePoints": [
+          "Architecture peu modulaire.",
+          "Sections difficiles a maintenir.",
+          "Manque de pages detaillees par projet."
+        ],
+        "solution": "Refonte complete avec Next.js App Router, composants reutilisables et structuration claire des contenus.",
+        "solutionHighlight": "Cette version facilite les evolutions futures et permet une meilleure lecture des realisations techniques.",
+        "features": [
+          {
+            "title": "Design system coherent",
+            "desc": "Composants harmonises pour garantir une identite visuelle stable."
+          },
+          {
+            "title": "I18n integre",
+            "desc": "Support bilingue avec gestion locale des contenus."
+          },
+          {
+            "title": "Animations mesurees",
+            "desc": "Interactions fluides sans impacter les performances."
+          },
+          {
+            "title": "Pages detail projet",
+            "desc": "Navigation dediee pour exposer challenge, solution et impact."
+          }
+        ],
+        "stats": [
+          {
+            "value": "95+",
+            "label": "Lighthouse perf"
+          },
+          {
+            "value": "100%",
+            "label": "Responsive"
+          },
+          {
+            "value": "-35%",
+            "label": "Code duplique"
+          }
+        ],
+        "timeline": "4 semaines",
+        "role": "Product engineer",
+        "industry": "Personal brand"
+      },
+      "portfolio": {
+        "summary": "Premiere version du portfolio qui a servi de base pour structurer mon positionnement et mes premiers projets publics.",
+        "challenge": "Mettre en ligne rapidement une vitrine professionnelle tout en gardant un style propre et moderne.",
+        "challengePoints": [
+          "Temps de livraison court.",
+          "Contenu evolutif encore incertain.",
+          "Besoin d une base simple a maintenir."
+        ],
+        "solution": "Implementation d une version initiale orientee lisibilite avec sections essentielles et stack front moderne.",
+        "solutionHighlight": "Cette base a permis de recueillir des retours utiles et de preparer la migration vers Portfolio V2.",
+        "features": [
+          {
+            "title": "Landing claire",
+            "desc": "Presentation directe du profil, des competences et des contacts."
+          },
+          {
+            "title": "Sections essentielles",
+            "desc": "Experience, projets et contact accessibles en un scroll."
+          },
+          {
+            "title": "Theme moderne",
+            "desc": "Palette et typographie coherentes avec une image professionnelle."
+          },
+          {
+            "title": "Base reusable",
+            "desc": "Fondation technique reutilisee pour la V2."
+          }
+        ],
+        "stats": [
+          {
+            "value": "1.5s",
+            "label": "Temps de chargement"
+          },
+          {
+            "value": "20+",
+            "label": "Retours recois"
+          },
+          {
+            "value": "3",
+            "label": "Iteractions majeures"
+          }
+        ],
+        "timeline": "3 semaines",
+        "role": "Frontend dev",
+        "industry": "Personal brand"
+      }
+    }
   }
 }
