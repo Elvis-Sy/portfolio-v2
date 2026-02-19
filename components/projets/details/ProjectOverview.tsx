@@ -6,9 +6,12 @@ type Props = {
   stats: DetailStat[]
   overviewLabel: string
   challengeTitle: string
+  solutionLabel: string
   solutionTitle: string
+  statsSectionLabel: string
+  statsTitle: string
+  featuresSectionLabel: string
   featuresTitle: string
-  statsLabel: string
 }
 
 const ProjectOverview = ({
@@ -16,14 +19,17 @@ const ProjectOverview = ({
   stats,
   overviewLabel,
   challengeTitle,
+  solutionLabel,
   solutionTitle,
+  statsSectionLabel,
+  statsTitle,
+  featuresSectionLabel,
   featuresTitle,
-  statsLabel,
 }: Props) => {
   return (
     <div className="space-y-16">
       <section>
-        <h2 className="text-primary mb-4 text-sm font-bold tracking-widest uppercase">
+        <h2 className="text-primary mb-3 text-sm font-bold tracking-widest uppercase">
           {overviewLabel}
         </h2>
         <h3 className="text-foreground-light dark:text-foreground-dark mb-6 text-3xl font-black">
@@ -46,6 +52,9 @@ const ProjectOverview = ({
       </section>
 
       <section className="border-y border-slate-200 py-12 dark:border-slate-800">
+        <h2 className="text-primary mb-3 text-sm font-bold tracking-widest uppercase">
+          {solutionLabel}
+        </h2>
         <h3 className="text-foreground-light dark:text-foreground-dark mb-6 text-3xl font-black">
           {solutionTitle}
         </h3>
@@ -60,8 +69,11 @@ const ProjectOverview = ({
       </section>
 
       <section>
+        <h2 className="text-primary mb-3 text-sm font-bold tracking-widest uppercase">
+          {statsSectionLabel}
+        </h2>
         <h3 className="text-foreground-light dark:text-foreground-dark mb-8 text-3xl font-black">
-          {statsLabel}
+          {statsTitle}
         </h3>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
@@ -80,6 +92,9 @@ const ProjectOverview = ({
       </section>
 
       <section>
+        <h2 className="text-primary mb-3 text-sm font-bold tracking-widest uppercase">
+          {featuresSectionLabel}
+        </h2>
         <h3 className="text-foreground-light dark:text-foreground-dark mb-8 text-3xl font-black">
           {featuresTitle}
         </h3>

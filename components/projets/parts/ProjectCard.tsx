@@ -123,7 +123,7 @@ const ProjectCard = React.memo(({ project, linkLabel, moreLabel }: Props) => {
               {hiddenCount > 0 && (
                 <span
                   title={hiddenTagsLabel}
-                  className="border-primary cursor-pointer flex max-w-full items-center gap-2 rounded-full border-2 bg-slate-900 px-3 py-1.5 font-medium text-slate-300"
+                  className="border-primary cursor-pointer flex max-w-full items-center gap-2 rounded-full border-2 bg-slate-900/70 px-3 py-1.5 font-medium text-primary"
                 >
                   +{hiddenCount} {moreLabel}
                 </span>

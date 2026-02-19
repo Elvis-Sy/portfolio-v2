@@ -219,14 +219,18 @@
       "techUsed": "Technologies utilisees",
       "overviewLabel": "01. Vue generale",
       "challengeTitle": "Le challenge",
-      "solutionTitle": "La solution",
+      "solutionTitle": "Solutions implementees",
       "featuresTitle": "Fonctionnalites cle",
       "statsLabel": "Impact & Resultats",
       "timelineLabel": "Duree",
       "roleLabel": "Role",
       "industryLabel": "Secteur",
       "ctaLabel": "Demander une variante",
-      "nextProjectLabel": "Projet suivant"
+      "nextProjectLabel": "Projet suivant",
+      "solutionLabel": "02. Solution",
+      "statsSectionLabel": "03. Impact & Resultats",
+      "featuresSectionLabel": "04. Fonctionnalites",
+      "statsTitle": "Resultats mesurables"
     },
     "projects": {
       "flotmax": {

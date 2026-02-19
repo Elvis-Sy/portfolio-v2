@@ -7,6 +7,10 @@ import { ChevronRight, ChevronLeft } from "lucide-react"
 import Button from "../ui/Button"
 import ProjectCard from "./parts/ProjectCard"
 import { useTranslations } from "next-intl"
+import {
+  PROJECT_DETAIL_META,
+  getProjectStackAll,
+} from "./details/projectDetails.data"
 
 type ProjectBase = {
   id: string
@@ -15,32 +19,18 @@ type ProjectBase = {
   gradient?: [string, string]
 }
 
-const baseProjects: ProjectBase[] = [
-  {
-    id: "flotmax",
-    tags: ["typescript", "react", "tailwindcss"],
-    href: "projects/flotmax",
-    gradient: ["#1e3a8a", "#3b0764"],
-  },
-  {
-    id: "moodspace",
-    tags: ["react", "typescript", "tailwindcss"],
-    href: "projects/moodspace",
-    gradient: ["#f97316", "#c2410c"],
-  },
-  {
-    id: "portfolio-2",
-    tags: ["nextjs", "typescript", "aws"],
-    href: "projects/portfolio-2",
-    gradient: ["#a7f3d0", "#f0fdf4"],
-  },
-  {
-    id: "portfolio",
-    tags: ["javascript", "nextjs", "tailwindcss"],
-    href: "projects/portfolio",
-    gradient: ["#2f4f4f", "#556b2f"],
-  },
-]
+const projectIds = ["flotmax", "moodspace", "portfolio-2", "portfolio"] as const
+
+const baseProjects: ProjectBase[] = projectIds.map((id) => {
+  const meta = PROJECT_DETAIL_META[id]
+
+  return {
+    id,
+    tags: getProjectStackAll(id),
+    href: `projects/${id}`,
+    gradient: meta.gradient,
+  }
+})
 
 const Projets = () => {
   const t = useTranslations("Projets")

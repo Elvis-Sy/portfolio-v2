@@ -10,6 +10,7 @@ import ProjectSidebar from "@/components/projets/details/ProjectSidebar"
 import {
   PROJECT_DETAIL_META,
   getNextProjectId,
+  getProjectStackPreview,
 } from "@/components/projets/details/projectDetails.data"
 import type { ProjectDetailsContent } from "@/components/projets/details/types"
 
@@ -30,7 +31,7 @@ export default async function ProjectDetailsPage({ params }: Props) {
 
   const title = tProjects(`projects.${projectId}.title`)
   const content = t.raw(`projects.${projectId}`) as ProjectDetailsContent
-  const tags = [...projectMeta.stack.frontend, ...projectMeta.stack.backend].slice(0, 6)
+  const tags = getProjectStackPreview(projectId)
 
   const nextProjectId = getNextProjectId(projectId)
   const nextTitle = tProjects(`projects.${nextProjectId}.title`)
@@ -64,9 +65,12 @@ export default async function ProjectDetailsPage({ params }: Props) {
               stats={content.stats}
               overviewLabel={t("common.overviewLabel")}
               challengeTitle={t("common.challengeTitle")}
+              solutionLabel={t("common.solutionLabel")}
               solutionTitle={t("common.solutionTitle")}
+              statsSectionLabel={t("common.statsSectionLabel")}
+              statsTitle={t("common.statsTitle")}
+              featuresSectionLabel={t("common.featuresSectionLabel")}
               featuresTitle={t("common.featuresTitle")}
-              statsLabel={t("common.statsLabel")}
             />
           </div>
 
@@ -82,19 +86,33 @@ export default async function ProjectDetailsPage({ params }: Props) {
         </section>
 
         <section className="mx-auto mt-8 max-w-7xl px-6">
-          <div className="relative overflow-hidden rounded-[3rem] border border-slate-200 bg-white p-12 text-center dark:border-slate-800 dark:bg-slate-900">
-            <h2 className="text-foreground-light dark:text-foreground-dark text-sm font-bold tracking-widest uppercase">
-              {t("common.nextProjectLabel")}
-            </h2>
-            <Link
-              href={`/${locale}/projects/${nextProjectId}`}
-              className="group mt-8 inline-flex items-center gap-3"
-            >
-              <span className="text-foreground-light dark:text-foreground-dark group-hover:text-primary text-4xl font-black transition-colors md:text-5xl">
-                {nextTitle}
-              </span>
-              <ArrowRight className="text-primary transition-transform group-hover:translate-x-2" />
-            </Link>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-10 text-center dark:border-slate-800 dark:bg-slate-900">
+              <h2 className="text-foreground-light dark:text-foreground-dark text-sm font-bold tracking-widest uppercase">
+                {t("common.nextProjectLabel")}
+              </h2>
+              <Link
+                href={`/${locale}/projects/${nextProjectId}`}
+                className="group mt-6 inline-flex items-center gap-3"
+              >
+                <span className="text-foreground-light dark:text-foreground-dark group-hover:text-primary text-3xl font-black transition-colors md:text-4xl">
+                  {nextTitle}
+                </span>
+                <ArrowRight className="text-primary transition-transform group-hover:translate-x-2" />
+              </Link>
+            </div>
+
+            <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-10 text-center dark:border-slate-800 dark:bg-slate-900">
+              <h2 className="text-foreground-light dark:text-foreground-dark text-sm font-bold tracking-widest uppercase">
+                {t("common.backToPortfolio")}
+              </h2>
+              <Link
+                href={`/${locale}#projects`}
+                className="bg-primary mt-6 inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-bold text-white transition-all hover:brightness-110"
+              >
+                {t("common.backToPortfolio")}
+              </Link>
+            </div>
           </div>
         </section>
       </main>
