@@ -235,26 +235,21 @@
     "projects": {
       "flotmax": {
         "summary": "Plateforme pedagogique pour resoudre, simuler et visualiser les problemes de flot maximal avec une interface simple et rapide.",
-        "challenge": "Les etudiants avaient du mal a comprendre les etapes des algorithmes de flot maximal et a verifier les resultats manuellement.",
+        "challenge": "On nous a demandé de programmer le processus et les étapes de calcul pour résoudre un problème de flot maximal afin de faciler la vérification sur papier.",
         "challengePoints": [
-          "Visualisation limitee des chemins augmentants.",
-          "Beaucoup de calculs repetitifs sur papier.",
-          "Difficulte a comparer plusieurs strategies de resolution."
+          "Implementer des algorithmes de Ford-Fulkerson et de MANUEL BLOCH.",
+          "Utiliser du parcours DFS."
         ],
-        "solution": "Une interface interactive a ete creee pour dessiner les graphes, lancer les calculs et afficher les etapes de chaque iteration.",
-        "solutionHighlight": "La solution a accelere la comprehension des algorithmes et reduit le temps de resolution des exercices complexes.",
+        "solution": "Une interface interactive à été créée pour dessiner les graphes, lancer les calculs et afficher les etapes de chaque iteration jusqu'à obtenir le flot maximal.",
+        "solutionHighlight": "La solution a accéleré la comprehension des algorithmes et reduit le temps de résolution des exercices complexes.",
         "features": [
           {
             "title": "Simulation pas-a-pas",
-            "desc": "Affichage detaille des iterations pour suivre chaque mise a jour de capacite."
+            "desc": "Affichage detaille des itérations pour suivre chaque mise à jour de capacité."
           },
           {
             "title": "Edition de graphe",
-            "desc": "Ajout/suppression rapide de noeuds et d aretes avec controles de contraintes."
-          },
-          {
-            "title": "Export des resultats",
-            "desc": "Generation de rapports exploitables pour revision ou presentation."
+            "desc": "Ajout/suppression rapide de noeuds et d'aretes avec contrôles de contraintes."
           },
           {
             "title": "Verification automatique",
@@ -263,94 +258,82 @@
         ],
         "stats": [
           {
-            "value": "40%",
-            "label": "Temps gagne"
+            "value": "25%",
+            "label": "Temps gagné"
           },
           {
             "value": "3x",
-            "label": "Plus de cas testes"
-          },
-          {
-            "value": "95%",
-            "label": "Satisfaction utilisateurs"
+            "label": "Plus de cas testés"
           }
         ],
-        "timeline": "6 semaines",
-        "role": "Full-stack dev",
+        "timeline": "2 semaine",
+        "role": "Programmeur principal",
         "industry": "Education"
       },
       "moodspace": {
-        "summary": "Application de suivi d humeur avec visualisations temporelles pour aider les utilisateurs a mieux comprendre leurs cycles emotionnels.",
-        "challenge": "Les utilisateurs manquaient d outils simples pour enregistrer leur humeur et identifier des tendances exploitables.",
+        "summary": "Application de suivi d'humeur avec visualisations temporelles pour aider les utilisateurs à mieux comprendre leurs cycles emotionnels.",
+        "challenge": "Les utilisateurs manquaient d'outils simples pour enregistrer leur humeur et canaliser leur attention.",
         "challengePoints": [
-          "Donnees emotionnelles dispersees.",
-          "Faible adherence sur les apps classiques.",
-          "Peu d insights concrets au quotidien."
+          "Appliquer une solution 'Client-side Storage'.",
+          "Créer des graphiques clairs pour visualiser les tendances.",
+          "Rendre l'expérience engageante pour encourager une utilisation régulière."
         ],
-        "solution": "Creation d un parcours ultra-simple de saisie avec rappels, graphiques hebdomadaires et recommandations contextuelles.",
-        "solutionHighlight": "Le taux d engagement hebdomadaire a nettement augmente grace a une UX plus legere et des retours immediats.",
+        "solution": "Creation d'un parcours ultra-simple de saisie, graphiques hebdomadaires et d'autres sections conviviales.",
+        "solutionHighlight": "L'application permet aux utilisateurs de mieux comprendre leurs émotions et d'adopter des habitudes de suivi régulières.",
         "features": [
           {
-            "title": "Tracking quotidien",
-            "desc": "Enregistrement rapide de l humeur en quelques secondes."
+            "title": "Assistant IA",
+            "desc": "Meilleur compagnon pour guider les utilisateurs dans l'expression de leurs émotions."
           },
           {
-            "title": "Courbes evolutives",
+            "title": "Courbes évolutives",
             "desc": "Lecture claire des tendances sur 7, 30 et 90 jours."
           },
           {
-            "title": "Journal reflexif",
-            "desc": "Ajout de notes pour enrichir le contexte emotionnel."
+            "title": "Moodboard personnalisé",
+            "desc": "Espace de création pour exprimer visuellement ses émotions."
           },
           {
-            "title": "Alertes intelligentes",
-            "desc": "Rappels personnalises selon comportement et frequence d usage."
+            "title": "Todo list",
+            "desc": "Outil de gestion de tâches pour aider à canaliser l'attention et réduire le stress."
           }
         ],
         "stats": [
           {
-            "value": "52%",
-            "label": "Retention 30j"
-          },
-          {
             "value": "4.7/5",
-            "label": "Note moyenne"
-          },
-          {
-            "value": "2x",
-            "label": "Sessions hebdo"
+            "label": "Note moyenne d'humeur"
           }
         ],
-        "timeline": "8 semaines",
-        "role": "Frontend lead",
+        "timeline": "1,5 semaine",
+        "role": "Developpeur",
         "industry": "HealthTech"
       },
       "portfolio-2": {
-        "summary": "Deuxieme version de mon portfolio avec accent sur performances, modularite et meilleure presentation des projets.",
-        "challenge": "Le site precedent etait limite pour presenter des cas pratiques detailles et evoluer facilement.",
+        "summary": "Deuxième version de mon portfolio avec accent sur performances, modularite et meilleure présentation des projets.",
+        "challenge": "Le site précedent était limité pour présenter des cas pratiques détaillés et évoluer facilement, et manquait de fluidité et de rapidité au démarrage.",
         "challengePoints": [
-          "Architecture peu modulaire.",
-          "Sections difficiles a maintenir.",
-          "Manque de pages detaillees par projet."
+          "Améliorer les performances pour un chargement plus rapide.",
+          "Optimiser l'expérience utilisateur avec des animations et un design plus uniforme.",
+          "Mettre en valeur les offres de services."
         ],
-        "solution": "Refonte complete avec Next.js App Router, composants reutilisables et structuration claire des contenus.",
-        "solutionHighlight": "Cette version facilite les evolutions futures et permet une meilleure lecture des realisations techniques.",
+        "solution": "Refonte complète avec composants réutilisables et structuration claire des contenus.",
+        "solutionHighlight": "Cette version facilite les évolutions futures et permet une meilleure lecture des réalisations techniques.",
         "features": [
           {
-            "title": "Design system coherent",
-            "desc": "Composants harmonises pour garantir une identite visuelle stable."
+            "title": "Design system cohérent",
+            "desc": "Composants harmonisés pour garantir une identite visuelle stable."
           },
           {
-            "title": "I18n integre",
-            "desc": "Support bilingue avec gestion locale des contenus."
+            "title": "Dark/Light mode",
+            "desc": "Thème adaptable pour une meilleure expérience utilisateur."
           },
           {
-            "title": "Animations mesurees",
+            "title": "Animations mesurées",
             "desc": "Interactions fluides sans impacter les performances."
           },
           {
-            "title": "Pages detail projet",
-            "desc": "Navigation dediee pour exposer challenge, solution et impact."
+            "title": "Pages détail projet",
+            "desc": "Navigation dediée pour exposer challenge, solution et impact."
           }
         ],
         "stats": [
@@ -361,60 +344,48 @@
           {
             "value": "100%",
             "label": "Responsive"
-          },
-          {
-            "value": "-35%",
-            "label": "Code duplique"
           }
         ],
-        "timeline": "4 semaines",
-        "role": "Product engineer",
+        "timeline": "2 semaines",
+        "role": "Developpeur",
         "industry": "Personal brand"
       },
       "portfolio": {
         "summary": "Premiere version du portfolio qui a servi de base pour structurer mon positionnement et mes premiers projets publics.",
         "challenge": "Mettre en ligne rapidement une vitrine professionnelle tout en gardant un style propre et moderne.",
         "challengePoints": [
-          "Temps de livraison court.",
-          "Contenu evolutif encore incertain.",
-          "Besoin d une base simple a maintenir."
+          "Livrer dans un délai court pour ne pas perdre de visibilité.",
+          "Structurer les contenus pour une lecture fluide.",
+          "Adopter une esthétique moderne avec mon image professionnelle."
         ],
-        "solution": "Implementation d une version initiale orientee lisibilite avec sections essentielles et stack front moderne.",
-        "solutionHighlight": "Cette base a permis de recueillir des retours utiles et de preparer la migration vers Portfolio V2.",
+        "solution": "Implémentation d'une version initiale orientée lisibilité avec sections essentielles et stack front moderne.",
+        "solutionHighlight": "Cette base a permis de recueillir des retours utiles et de préparer la migration vers la V2.",
         "features": [
           {
             "title": "Landing claire",
-            "desc": "Presentation directe du profil, des competences et des contacts."
+            "desc": "Présentation directe du profil et des contacts."
           },
           {
-            "title": "Sections essentielles",
+            "title": "Sections éssentielles",
             "desc": "Experience, projets et contact accessibles en un scroll."
           },
           {
             "title": "Theme moderne",
-            "desc": "Palette et typographie coherentes avec une image professionnelle."
-          },
-          {
-            "title": "Base reusable",
-            "desc": "Fondation technique reutilisee pour la V2."
+            "desc": "Palette et typographie coherentes avec une image futuristique."
           }
         ],
         "stats": [
           {
-            "value": "1.5s",
-            "label": "Temps de chargement"
-          },
-          {
             "value": "20+",
-            "label": "Retours recois"
+            "label": "Visiteurs uniques"
           },
           {
             "value": "3",
-            "label": "Iteractions majeures"
+            "label": "Projets présentés"
           }
         ],
-        "timeline": "3 semaines",
-        "role": "Frontend dev",
+        "timeline": "1 semaine",
+        "role": "Developpeur",
         "industry": "Personal brand"
       }
     }

@@ -28,7 +28,7 @@ export type ProjectDetailMeta = {
   liveUrl: string
   sourceUrl: string
   stack: {
-    frontend: string[]
-    backend: string[]
+    frontend?: string[]
+    backend?: string[]
   }
 }

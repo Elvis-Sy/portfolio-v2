@@ -11,7 +11,6 @@ export const PROJECT_DETAIL_META: Record<string, ProjectDetailMeta> = {
     sourceUrl: "https://github.com/Elvis-Sy/FlotMaximal",
     stack: {
       frontend: ["React", "TypeScript", "Tailwind CSS"],
-      backend: ["Node.js", "Express", "PostgreSQL"],
     },
   },
   moodspace: {
@@ -21,8 +20,7 @@ export const PROJECT_DETAIL_META: Record<string, ProjectDetailMeta> = {
     liveUrl: "https://moodsspace.vercel.app",
     sourceUrl: "https://github.com/Elvis-Sy/MoodSpace",
     stack: {
-      frontend: ["React", "TypeScript", "Tailwind CSS"],
-      backend: ["NestJS", "PostgreSQL", "Redis"],
+      frontend: ["React", "TypeScript", "Tailwind CSS, Framer Motion"],
     },
   },
   "portfolio-2": {
@@ -32,8 +30,7 @@ export const PROJECT_DETAIL_META: Record<string, ProjectDetailMeta> = {
     liveUrl: "#",
     sourceUrl: "https://github.com/Elvis-Sy/portfolio-v2",
     stack: {
-      frontend: ["Next.js", "TypeScript", "Tailwind CSS"],
-      backend: ["Node.js", "Vercel", "AWS"],
+      frontend: ["Next.js", "TypeScript", "Tailwind CSS"]
     },
   },
   portfolio: {
@@ -44,7 +41,6 @@ export const PROJECT_DETAIL_META: Record<string, ProjectDetailMeta> = {
     sourceUrl: "https://github.com/Elvis-Sy/ES-portfolio",
     stack: {
       frontend: ["Next.js", "JavaScript", "Tailwind CSS"],
-      backend: ["Node.js", "Supabase"],
     },
   },
 }
@@ -57,7 +53,10 @@ export const getProjectStackAll = (projectId: string) => {
     return []
   }
 
-  return [...new Set([...meta.stack.frontend, ...meta.stack.backend])]
+  const frontend = meta.stack.frontend ?? []
+  const backend = meta.stack.backend ?? []
+
+  return [...new Set([...frontend, ...backend])]
 }
 
 export const getProjectStackPreview = (
