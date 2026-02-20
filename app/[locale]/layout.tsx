@@ -11,15 +11,18 @@ import "../globals.css";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
-type Props = { children: React.ReactNode; params: Promise<{ locale: string }> };
+type Props = { 
+  children: React.ReactNode; 
+  params: { locale: string } 
+};
 
 export default async function LocaleLayout({ children, params }: Props) {
-  const { locale } = await params;
+  const { locale } = params;
 
   if (!locales.includes(locale)) notFound();
 
   const messages = await getMessages({ locale });
-  const cookieStore = await cookies();
+  const cookieStore = await cookies(); // no await in Next 15
   const themeCookie = cookieStore.get("theme")?.value;
   const isDark = themeCookie === "dark";
 
@@ -38,7 +41,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = await params;
+  const { locale } = params;
 
   if (!locales.includes(locale)) {
     return { title: "Not Found" };
