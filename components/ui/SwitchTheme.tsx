@@ -14,14 +14,15 @@ export default function SwitchTheme() {
   useEffect(() => {
     try {
       const match = document.cookie.match(/(?:^|; )theme=([^;]+)/)
-      if (match?.[1] === "dark") setIsDark(true)
-      else if (match?.[1] === "light") setIsDark(false)
-      else if (document.documentElement.classList.contains("dark")) setIsDark(true)
-      else {
+
+      if (match?.[1] === "dark") {
+        setIsDark(true)
+      } else if (match?.[1] === "light") {
+        setIsDark(false)
+      } else {
         const v = localStorage.getItem(STORAGE_KEY)
         if (v === "dark") setIsDark(true)
-        else if (v === "light") setIsDark(false)
-        else setIsDark(window.matchMedia?.("(prefers-color-scheme: dark)").matches)
+        else setIsDark(false)
       }
     } catch {
       /* noop */
@@ -46,23 +47,6 @@ export default function SwitchTheme() {
       document.cookie = `${COOKIE_KEY}=light; path=/; max-age=${COOKIE_MAX_AGE}; samesite=lax`
     }
   }, [isDark, mounted])
-
-  // sync if user changes system preference
-  useEffect(() => {
-    const mq = window.matchMedia?.("(prefers-color-scheme: dark)")
-    if (!mq) return
-    const handler = (e: MediaQueryListEvent) => {
-      // only apply if user hasn't explicitly chosen (optional)
-      try {
-        const saved = localStorage.getItem(STORAGE_KEY)
-        if (saved == null) setIsDark(e.matches)
-      } catch {
-        /* noop */
-      }
-    }
-    mq.addEventListener?.("change", handler)
-    return () => mq.removeEventListener?.("change", handler)
-  }, [])
 
   return (
     <button
