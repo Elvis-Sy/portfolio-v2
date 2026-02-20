@@ -20,7 +20,7 @@ export const PROJECT_DETAIL_META: Record<string, ProjectDetailMeta> = {
     liveUrl: "https://moodsspace.vercel.app",
     sourceUrl: "https://github.com/Elvis-Sy/MoodSpace",
     stack: {
-      frontend: ["React", "TypeScript", "Tailwind CSS, Framer Motion"],
+      frontend: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     },
   },
   "portfolio-2": {
