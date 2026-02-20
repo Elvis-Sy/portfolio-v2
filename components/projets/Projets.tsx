@@ -7,6 +7,10 @@ import { ChevronRight, ChevronLeft } from "lucide-react"
 import Button from "../ui/Button"
 import ProjectCard from "./parts/ProjectCard"
 import { useTranslations } from "next-intl"
+import {
+  PROJECT_DETAIL_META,
+  getProjectStackAll,
+} from "./details/projectDetails.data"
 
 type ProjectBase = {
   id: string
@@ -15,28 +19,18 @@ type ProjectBase = {
   gradient?: [string, string]
 }
 
-const baseProjects: ProjectBase[] = [
-  {
-    id: "flotmax",
-    tags: ["typescript", "react", "tailwindcss"],
-    gradient: ["#1e3a8a", "#3b0764"],
-  },
-  {
-    id: "moodspace",
-    tags: ["react", "typescript", "tailwindcss"],
-    gradient: ["#f97316", "#c2410c"],
-  },
-  {
-    id: "portfolio-2",
-    tags: ["Node.js", "AWS"],
-    gradient: ["#a7f3d0", "#f0fdf4"],
-  },
-  {
-    id: "portfolio",
-    tags: ["javascript", "nextjs", "tailwindcss"],
-    gradient: ["#2f4f4f", "#556b2f"],
-  },
-]
+const projectIds = ["flotmax", "moodspace", "portfolio-2", "portfolio"] as const
+
+const baseProjects: ProjectBase[] = projectIds.map((id) => {
+  const meta = PROJECT_DETAIL_META[id]
+
+  return {
+    id,
+    tags: getProjectStackAll(id),
+    href: `projects/${id}`,
+    gradient: meta.gradient,
+  }
+})
 
 const Projets = () => {
   const t = useTranslations("Projets")
@@ -94,7 +88,7 @@ const Projets = () => {
               aria-label={t("prevAria")}
               variant="ghost"
               onClick={scrollPrev}
-              className="flex size-12 items-center justify-center rounded-full border dark:hover:bg-slate-100/50 dark:hover:text-slate-200 border-slate-300 dark:border-slate-700"
+              className="flex size-12 items-center justify-center rounded-full border border-slate-300 dark:border-slate-700 dark:hover:bg-slate-100/50 dark:hover:text-slate-200"
             >
               <ChevronLeft />
             </Button>
@@ -103,14 +97,13 @@ const Projets = () => {
               aria-label={t("nextAria")}
               variant="ghost"
               onClick={scrollNext}
-              className="flex size-12 items-center justify-center rounded-full border dark:hover:bg-slate-100/50 dark:hover:text-slate-200 border-slate-300 dark:border-slate-700"
+              className="flex size-12 items-center justify-center rounded-full border border-slate-300 dark:border-slate-700 dark:hover:bg-slate-100/50 dark:hover:text-slate-200"
             >
               <ChevronRight />
             </Button>
           </div>
         </div>
 
-        {/* Embla */}
         <div className="overflow-hidden active:cursor-grabbing" ref={emblaRef}>
           <div className="flex">
             {projects.map((project) => (
