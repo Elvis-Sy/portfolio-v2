@@ -87,7 +87,7 @@ export default async function ProjectDetailsPage({ params }: Props) {
 
         <section className="mx-auto mt-8 max-w-7xl px-6">
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="relative order-1 md:order-2 overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-10 text-center dark:border-slate-800 dark:bg-slate-900">
+            <div className="relative order-1 md:order-2 overflow-hidden rounded-4xl border border-slate-200 bg-white p-10 text-center dark:border-slate-800 dark:bg-slate-900">
               <h2 className="text-foreground-light dark:text-foreground-dark text-sm font-bold tracking-widest uppercase">
                 {t("common.nextProjectLabel")}
               </h2>
@@ -102,7 +102,7 @@ export default async function ProjectDetailsPage({ params }: Props) {
               </Link>
             </div>
 
-            <div className="relative order-2 md:order-1 overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-10 text-center dark:border-slate-800 dark:bg-slate-900">
+            <div className="relative order-2 md:order-1 overflow-hidden rounded-4xl border border-slate-200 bg-white p-10 text-center dark:border-slate-800 dark:bg-slate-900">
               <h2 className="text-foreground-light dark:text-foreground-dark text-sm font-bold tracking-widest uppercase">
                 {t("common.backToPortfolio")}
               </h2>
