@@ -1,0 +1,393 @@
+{
+  "Hero": {
+    "status": "Disponible pour nouveaux projets",
+    "titlePrefix": "Transformer la",
+    "titleHighlight": "technologie",
+    "titleSuffix": "en solutions efficaces",
+    "typewriter": [
+      "Développeur web Full-Stack",
+      "Ingénieur DevOps Junior"
+    ],
+    "projectsButton": "Voir mes projets",
+    "contactButton": "Contactez-moi",
+    "experienceLabel": "Expérience",
+    "experienceValue": "+4 ans",
+    "altPortrait": "Portrait Elvis Sylvano",
+    "verified": "Vérifié"
+  },
+  "Navbar": {
+    "links": {
+      "home": "Accueil",
+      "about": "À propos",
+      "experience": "Parcours",
+      "skills": "Compétences",
+      "projects": "Projets"
+    },
+    "contactCta": "Contact",
+    "hireMe": "Contact"
+  },
+  "About": {
+    "sectionLabel": "01. À propos de moi",
+    "titlePrefix": "Bonjour — Je m'appelle",
+    "titleName": "Elvis",
+    "titleSuffix": "Sylvano",
+    "description": "Je suis un développeur dévoué qui adore relever les défis et étendre ses compétences sur différents projets. Ma curiosité me permet de m'adapter rapidement aux nouvelles tendances pour optimiser mes développements. Ainsi, je m'efforce de créer des solutions performantes, évolutives et adaptées aux utilisateurs.",
+    "badges": [
+      "Autonome",
+      "Curieux",
+      "Méthodique"
+    ],
+    "statsLabel": "Projets réalisés",
+    "cvButton": "Télécharger CV"
+  },
+  "Experience": {
+    "sectionLabel": "02. Parcours",
+    "sectionTitle": "Études & Expérience",
+    "items": [
+      {
+        "id": "student",
+        "title": "Étudiant en Master",
+        "company": "École Nationale d'Informatique",
+        "date": "2025 - Présent",
+        "bullets": [
+          "Approfondissement des architectures logicielles avancées et des systèmes distribués.",
+          "Réalisation de projets académiques orientés performance et conception d'applications évolutives."
+        ]
+      },
+      {
+        "id": "bachelor",
+        "title": "Licence en Informatique",
+        "company": "École Nationale d'Informatique",
+        "date": "2025",
+        "bullets": [
+          "Obtention d'une Licence en Informatique dans le parcours \"Génie logiciel et Bases de données\".",
+          "Acquisition de solides bases en algorithmique, structures de données et génie logiciel."
+        ]
+      },
+      {
+        "id": "stage1",
+        "title": "Stagiaire Développeur web",
+        "company": "Société du Port à gestion Autonome de Toamasina (SPAT)",
+        "date": "Sept - Déc 2024",
+        "bullets": [
+          "Développement d'une plateforme de gestion des congés permettant la demande, l'approbation et le suivi des congés avec Next.js, NestJS et MySQL.",
+          "Modélisation d'une base de données relationnelle (employés, demandes, approbations,...).",
+          "Implémentation d'API REST avec authentification basée sur un RBAC et JWT."
+        ]
+      },
+      {
+        "id": "stage2",
+        "title": "Stagiaire Développeur web",
+        "company": "Société de Manutention de Marchandises Conventionnelles (SMMC)",
+        "date": "Août - Nov 2023",
+        "bullets": [
+          "Conception et développement d'une application web de suivi des entrées et sorties des visiteurs avec HTML, CSS et JSP.",
+          "Mise en place d'un tableau de bord administratif pour visualiser et gérer les flux de visiteurs, permettant une réduction des erreurs d'enregistrement."
+        ]
+      }
+    ]
+  },
+  "Skills": {
+    "sectionTitle": "03. Compétences Techniques"
+  },
+  "Expertises": {
+    "sectionTitle": "Expertise en solutions digitales",
+    "sectionDesc": "Je développe des solutions digitales complètes, de la conception à la mise en production, en combinant design, performance et scalabilité.",
+    "items": [
+      {
+        "id": "frontend",
+        "title": "Frontend",
+        "desc": "Création d'interfaces interactives et ergonomiques centrées utilisateur"
+      },
+      {
+        "id": "backend",
+        "title": "Backend",
+        "desc": "Conception d'architectures serveur robustes et performantes"
+      },
+      {
+        "id": "cloud",
+        "title": "Cloud & DevOps",
+        "desc": "Déploiement d'infrastructures scalables et automatisation des flux"
+      },
+      {
+        "id": "design",
+        "title": "Design UI/UX",
+        "desc": "Conception d'expériences utilisateur intuitives et visuellement attrayantes"
+      }
+    ]
+  },
+  "Proficiencies": {
+    "sectionTitle": "Maîtrises Techniques",
+    "categories": [
+      {
+        "id": "languages",
+        "title": "Langages",
+        "items": [
+          "JavaScript (ES6+)",
+          "TypeScript",
+          "Python",
+          "HTML5/CSS3"
+        ]
+      },
+      {
+        "id": "frameworks",
+        "title": "Frameworks",
+        "items": [
+          "React / Next.js",
+          "Node.js",
+          "Express.js",
+          "NestJS",
+          "Django",
+          "FastAPI",
+          "Tailwind CSS / DaisyUI"
+        ]
+      },
+      {
+        "id": "databases",
+        "title": "Bases de données",
+        "items": [
+          "PostgreSQL",
+          "MongoDB",
+          "MySQL",
+          "Supabase"
+        ]
+      },
+      {
+        "id": "tools",
+        "title": "Outils",
+        "items": [
+          "Git / GitHub",
+          "Docker",
+          "AWS (S3, EC2)",
+          "Figma"
+        ]
+      }
+    ]
+  },
+  "Projets": {
+    "sectionLabel": "05. Projets",
+    "sectionTitle": "Projets récents",
+    "prevAria": "Projet précédent",
+    "nextAria": "Projet suivant",
+    "linkLabel": "Voir informations",
+    "moreLabel": "autre(s)",
+    "projects": {
+      "flotmax": {
+        "title": "FlotMax",
+        "desc": "Application aidant pour les problèmes de flot maximal"
+      },
+      "moodspace": {
+        "title": "MoodSpace",
+        "desc": "Plateforme web conçue pour aider à suivre l'humeur"
+      },
+      "portfolio-2": {
+        "title": "Portfolio V2",
+        "desc": "Mon portfolio actuel construit avec Next.js et Tailwind CSS"
+      },
+      "portfolio": {
+        "title": "Ancien portfolio",
+        "desc": "Mon ancien portfolio tiré du template de Shubh Porwal"
+      }
+    }
+  },
+  "Contact": {
+    "sectionLabel": "06. Contact",
+    "sectionTitle": "Prêt à construire quelque chose d’exceptionnel ?",
+    "sectionDesc": "Un projet en tête ? ou simplement envie d’échanger ? Envoyez-moi un message et voyons comment collaborer efficacement.",
+    "emailLabel": "Email",
+    "phoneLabel": "Téléphone",
+    "locationLabel": "Localisation",
+    "formFirstName": "Prénom",
+    "formLastName": "Nom",
+    "formEmail": "Adresse email",
+    "formMessage": "Votre message",
+    "placeholderFirstName": "John",
+    "placeholderLastName": "Doe",
+    "placeholderEmail": "john@example.com",
+    "placeholderMessage": "Comment puis-je vous aider ?",
+    "submitButton": "Envoyer"
+  },
+  "Footer": {
+    "copyright": "© {year} Portfolio - Elvis Sylvano."
+  },
+  "ProjectDetails": {
+    "common": {
+      "badge": "Etude de cas",
+      "backToPortfolio": "Retour portfolio",
+      "liveDemo": "Demo live",
+      "sourceCode": "Code source",
+      "techUsed": "Technologies utilisées",
+      "overviewLabel": "01. Vue génerale",
+      "challengeTitle": "Le challenge",
+      "solutionTitle": "Solutions implémentées",
+      "featuresTitle": "Fonctionnalités clés",
+      "statsLabel": "Impact & Résultats",
+      "timelineLabel": "Durée",
+      "roleLabel": "Rôle",
+      "industryLabel": "Secteur",
+      "ctaLabel": "Demander une variante",
+      "nextProjectLabel": "Projet suivant",
+      "solutionLabel": "02. Solution",
+      "statsSectionLabel": "03. Impact & Resultats",
+      "featuresSectionLabel": "04. Fonctionnalités",
+      "statsTitle": "Resultats mesurables"
+    },
+    "projects": {
+      "flotmax": {
+        "summary": "Plateforme pedagogique pour resoudre, simuler et visualiser les problemes de flot maximal avec une interface simple et rapide.",
+        "challenge": "On nous a demandé de programmer le processus et les étapes de calcul pour résoudre un problème de flot maximal afin de faciler la vérification sur papier.",
+        "challengePoints": [
+          "Implementer des algorithmes de Ford-Fulkerson et de MANUEL BLOCH.",
+          "Utiliser du parcours DFS."
+        ],
+        "solution": "Une interface interactive à été créée pour dessiner les graphes, lancer les calculs et afficher les etapes de chaque iteration jusqu'à obtenir le flot maximal.",
+        "solutionHighlight": "La solution a accéleré la comprehension des algorithmes et reduit le temps de résolution des exercices complexes.",
+        "features": [
+          {
+            "title": "Simulation pas-a-pas",
+            "desc": "Affichage detaille des itérations pour suivre chaque mise à jour de capacité."
+          },
+          {
+            "title": "Edition de graphe",
+            "desc": "Ajout/suppression rapide de noeuds et d'aretes avec contrôles de contraintes."
+          },
+          {
+            "title": "Verification automatique",
+            "desc": "Validation des reponses et detection des incoherences de modelisation."
+          }
+        ],
+        "stats": [
+          {
+            "value": "25%",
+            "label": "Temps gagné"
+          },
+          {
+            "value": "3x",
+            "label": "Plus de cas testés"
+          }
+        ],
+        "timeline": "2 semaine",
+        "role": "Programmeur principal",
+        "industry": "Education"
+      },
+      "moodspace": {
+        "summary": "Application de suivi d'humeur avec visualisations temporelles pour aider les utilisateurs à mieux comprendre leurs cycles emotionnels.",
+        "challenge": "Les utilisateurs manquaient d'outils simples pour enregistrer leur humeur et canaliser leur attention.",
+        "challengePoints": [
+          "Appliquer une solution 'Client-side Storage'.",
+          "Créer des graphiques clairs pour visualiser les tendances.",
+          "Rendre l'expérience engageante pour encourager une utilisation régulière."
+        ],
+        "solution": "Creation d'un parcours ultra-simple de saisie, graphiques hebdomadaires et d'autres sections conviviales.",
+        "solutionHighlight": "L'application permet aux utilisateurs de mieux comprendre leurs émotions et d'adopter des habitudes de suivi régulières.",
+        "features": [
+          {
+            "title": "Assistant IA",
+            "desc": "Meilleur compagnon pour guider les utilisateurs dans l'expression de leurs émotions."
+          },
+          {
+            "title": "Courbes évolutives",
+            "desc": "Lecture claire des tendances sur 7, 30 et 90 jours."
+          },
+          {
+            "title": "Moodboard personnalisé",
+            "desc": "Espace de création pour exprimer visuellement ses émotions."
+          },
+          {
+            "title": "Todo list",
+            "desc": "Outil de gestion de tâches pour aider à canaliser l'attention et réduire le stress."
+          }
+        ],
+        "stats": [
+          {
+            "value": "4.7/5",
+            "label": "Note moyenne d'humeur"
+          }
+        ],
+        "timeline": "1,5 semaine",
+        "role": "Developpeur",
+        "industry": "HealthTech"
+      },
+      "portfolio-2": {
+        "summary": "Deuxième version de mon portfolio avec accent sur performances, modularite et meilleure présentation des projets.",
+        "challenge": "Le site précedent était limité pour présenter des cas pratiques détaillés et évoluer facilement, et manquait de fluidité et de rapidité au démarrage.",
+        "challengePoints": [
+          "Améliorer les performances pour un chargement plus rapide.",
+          "Optimiser l'expérience utilisateur avec des animations et un design plus uniforme.",
+          "Mettre en valeur les offres de services."
+        ],
+        "solution": "Refonte complète avec composants réutilisables et structuration claire des contenus.",
+        "solutionHighlight": "Cette version facilite les évolutions futures et permet une meilleure lecture des réalisations techniques.",
+        "features": [
+          {
+            "title": "Design system cohérent",
+            "desc": "Composants harmonisés pour garantir une identite visuelle stable."
+          },
+          {
+            "title": "Dark/Light mode",
+            "desc": "Thème adaptable pour une meilleure expérience utilisateur."
+          },
+          {
+            "title": "Animations mesurées",
+            "desc": "Interactions fluides sans impacter les performances."
+          },
+          {
+            "title": "Pages détail projet",
+            "desc": "Navigation dediée pour exposer challenge, solution et impact."
+          }
+        ],
+        "stats": [
+          {
+            "value": "95+",
+            "label": "Lighthouse perf"
+          },
+          {
+            "value": "100%",
+            "label": "Responsive"
+          }
+        ],
+        "timeline": "2 semaines",
+        "role": "Developpeur",
+        "industry": "Personal brand"
+      },
+      "portfolio": {
+        "summary": "Premiere version du portfolio qui a servi de base pour structurer mon positionnement et mes premiers projets publics.",
+        "challenge": "Mettre en ligne rapidement une vitrine professionnelle tout en gardant un style propre et moderne.",
+        "challengePoints": [
+          "Livrer dans un délai court pour ne pas perdre de visibilité.",
+          "Structurer les contenus pour une lecture fluide.",
+          "Adopter une esthétique moderne avec mon image professionnelle."
+        ],
+        "solution": "Implémentation d'une version initiale orientée lisibilité avec sections essentielles et stack front moderne.",
+        "solutionHighlight": "Cette base a permis de recueillir des retours utiles et de préparer la migration vers la V2.",
+        "features": [
+          {
+            "title": "Landing claire",
+            "desc": "Présentation directe du profil et des contacts."
+          },
+          {
+            "title": "Sections éssentielles",
+            "desc": "Experience, projets et contact accessibles en un scroll."
+          },
+          {
+            "title": "Theme moderne",
+            "desc": "Palette et typographie coherentes avec une image futuristique."
+          }
+        ],
+        "stats": [
+          {
+            "value": "20+",
+            "label": "Visiteurs uniques"
+          },
+          {
+            "value": "3",
+            "label": "Projets présentés"
+          }
+        ],
+        "timeline": "1 semaine",
+        "role": "Developpeur",
+        "industry": "Personal brand"
+      }
+    }
+  }
+}

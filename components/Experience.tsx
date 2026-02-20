@@ -1,4 +1,6 @@
-import React from "react"
+"use client"
+
+import { useTranslations } from "next-intl"
 
 type ExperienceItem = {
   id: string
@@ -8,43 +10,10 @@ type ExperienceItem = {
   bullets: string[]
 }
 
-const experiences: ExperienceItem[] = [
-  {
-    id: "senior",
-    title: "Senior Full-stack Developer",
-    company: "TechNova Solutions",
-    date: "2021 - Present",
-    bullets: [
-      "Led development of a microservices architecture serving 1M+ users.",
-      "Optimized application performance reducing load times by 45%.",
-      "Mentored a team of 5 junior developers on React best practices.",
-    ],
-  },
-  {
-    id: "frontend",
-    title: "Frontend Engineer",
-    company: "Creative Digital Agency",
-    date: "2018 - 2021",
-    bullets: [
-      "Developed 20+ responsive web applications using Next.js and Tailwind CSS.",
-      "Integrated complex 3rd party APIs for payment and logistics systems.",
-      "Improved SEO scores across client sites by an average of 30%.",
-    ],
-  },
-  {
-    id: "junior",
-    title: "Junior Web Developer",
-    company: "StartUp Inc.",
-    date: "2016 - 2018",
-    bullets: [
-      "Maintained and updated legacy PHP codebases for internal CRM tools.",
-      "Assisted in migrating monolithic services to modern Node.js stack.",
-      "Conducted end-to-end testing ensuring cross-browser compatibility.",
-    ],
-  },
-]
-
 const Experience = () => {
+  const t = useTranslations("Experience")
+  const experiences = t.raw("items") as ExperienceItem[]
+
   return (
     <section
       className="pattern-section relative overflow-hidden py-24"
@@ -54,15 +23,15 @@ const Experience = () => {
       <div className="relative z-20 mx-auto max-w-4xl px-6">
         <div className="mb-16 space-y-4 text-center">
           <h2 className="text-primary text-sm font-bold tracking-widest uppercase">
-            02. Career Path
+            {t("sectionLabel")}
           </h2>
-          <h3 className="text-3xl font-black text-foreground-light/90 dark:text-foreground-dark/90 md:text-5xl">
-            Work Experience
+          <h3 className="text-foreground-light/90 dark:text-foreground-dark/90 text-3xl font-black md:text-5xl">
+            {t("sectionTitle")}
           </h3>
         </div>
 
         <div className="before:via-primary relative space-y-12 before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:-translate-x-px before:bg-linear-to-b before:from-transparent before:to-transparent md:before:mx-auto md:before:translate-x-0">
-          {experiences.map((exp, idx) => (
+          {experiences.map((exp) => (
             <div
               key={exp.id}
               className="group relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse"

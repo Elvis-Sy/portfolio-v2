@@ -1,0 +1,372 @@
+{
+  "Hero": {
+    "status": "Available for new projects",
+    "titlePrefix": "Transform",
+    "titleHighlight": "technology",
+    "titleSuffix": "into effective solutions",
+    "typewriter": ["Full-Stack Web Developer", "Junior DevOps Engineer"],
+    "projectsButton": "View my projects",
+    "contactButton": "Contact me",
+    "experienceLabel": "Experience",
+    "experienceValue": "+4 yrs",
+    "altPortrait": "Portrait Elvis Sylvano",
+    "verified": "Verified"
+  },
+  "Navbar": {
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "experience": "Journey",
+      "skills": "Skills",
+      "projects": "Projects"
+    },
+    "contactCta": "Contact",
+    "hireMe": "Contact"
+  },
+  "About": {
+    "sectionLabel": "01. About me",
+    "titlePrefix": "Hello — My name is",
+    "titleName": "Elvis",
+    "titleSuffix": "Sylvano",
+    "description": "I am a dedicated developer who enjoys taking on challenges and expanding skills across diverse projects. My curiosity helps me adapt quickly to new trends and optimize my work. I strive to build performant, scalable solutions tailored to users.",
+    "badges": ["Autonomous", "Curious", "Methodical"],
+    "statsLabel": "Projects completed",
+    "cvButton": "Download CV"
+  },
+  "Experience": {
+    "sectionLabel": "02. Journey",
+    "sectionTitle": "Education & Experience",
+    "items": [
+      {
+        "id": "student",
+        "title": "Master's Student",
+        "company": "National School of Computer Science",
+        "date": "2025 - Present",
+        "bullets": [
+          "Deepening advanced software architectures and distributed systems.",
+          "Academic projects focused on performance and scalable application design."
+        ]
+      },
+      {
+        "id": "bachelor",
+        "title": "Bachelor's in Computer Science",
+        "company": "National School of Computer Science",
+        "date": "2025",
+        "bullets": [
+          "Earned a Bachelor's in Computer Science in the \"Software Engineering and Databases\" track.",
+          "Built strong foundations in algorithms, data structures, and software engineering."
+        ]
+      },
+      {
+        "id": "stage1",
+        "title": "Web Developer Intern",
+        "company": "Société du Port à gestion Autonome de Toamasina (SPAT)",
+        "date": "Sept - Dec 2024",
+        "bullets": [
+          "Built a leave management platform covering requests, approvals, and tracking with Next.js, NestJS, and MySQL.",
+          "Modeled a relational database (employees, requests, approvals,...).",
+          "Implemented REST APIs with RBAC- and JWT-based authentication."
+        ]
+      },
+      {
+        "id": "stage2",
+        "title": "Web Developer Intern",
+        "company": "Société de Manutention de Marchandises Conventionnelles (SMMC)",
+        "date": "Aug - Nov 2023",
+        "bullets": [
+          "Designed and developed a visitor check-in/out tracking web app with HTML, CSS, and JSP.",
+          "Delivered an admin dashboard to visualize and manage visitor flows, reducing entry errors."
+        ]
+      }
+    ]
+  },
+  "Skills": {
+    "sectionTitle": "03. Technical Skills"
+  },
+  "Expertises": {
+    "sectionTitle": "Expertise in Digital Solutions",
+    "sectionDesc": "I build complete digital solutions, from design to production, combining design, performance, and scalability.",
+    "items": [
+      {
+        "id": "frontend",
+        "title": "Frontend",
+        "desc": "Building interactive, ergonomic, user-centered interfaces"
+      },
+      {
+        "id": "backend",
+        "title": "Backend",
+        "desc": "Designing robust, high-performance server architectures"
+      },
+      {
+        "id": "cloud",
+        "title": "Cloud & DevOps",
+        "desc": "Deploying scalable infrastructure and automating delivery flows"
+      },
+      {
+        "id": "design",
+        "title": "UI/UX Design",
+        "desc": "Designing intuitive and visually appealing user experiences"
+      }
+    ]
+  },
+  "Proficiencies": {
+    "sectionTitle": "Technical Proficiencies",
+    "categories": [
+      {
+        "id": "languages",
+        "title": "Languages",
+        "items": ["JavaScript (ES6+)", "TypeScript", "Python", "HTML5/CSS3"]
+      },
+      {
+        "id": "frameworks",
+        "title": "Frameworks",
+        "items": [
+          "React / Next.js",
+          "Node.js",
+          "Express.js",
+          "NestJS",
+          "Django",
+          "FastAPI",
+          "Tailwind CSS / DaisyUI"
+        ]
+      },
+      {
+        "id": "databases",
+        "title": "Databases",
+        "items": ["PostgreSQL", "MongoDB", "MySQL", "Supabase"]
+      },
+      {
+        "id": "tools",
+        "title": "Tools",
+        "items": ["Git / GitHub", "Docker", "AWS (S3, EC2)", "Figma"]
+      }
+    ]
+  },
+  "Projets": {
+    "sectionLabel": "05. Projects",
+    "sectionTitle": "Recent projects",
+    "prevAria": "Previous project",
+    "nextAria": "Next project",
+    "linkLabel": "View details",
+    "moreLabel": "more",
+    "projects": {
+      "flotmax": {
+        "title": "FlotMax",
+        "desc": "An app to help with maximum flow problems"
+      },
+      "moodspace": {
+        "title": "MoodSpace",
+        "desc": "Web platform designed to help track mood"
+      },
+      "portfolio-2": {
+        "title": "Portfolio V2",
+        "desc": "My current portfolio built with Next.js and Tailwind CSS"
+      },
+      "portfolio": {
+        "title": "Previous portfolio",
+        "desc": "My previous portfolio based on the Shubh Porwal template"
+      }
+    }
+  },
+  "Contact": {
+    "sectionLabel": "06. Contact",
+    "sectionTitle": "Ready to build something exceptional?",
+    "sectionDesc": "Have a project in mind or just want to talk? Send me a message and let's see how we can work together.",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "locationLabel": "Location",
+    "formFirstName": "First name",
+    "formLastName": "Last name",
+    "formEmail": "Email address",
+    "formMessage": "Your message",
+    "placeholderFirstName": "John",
+    "placeholderLastName": "Doe",
+    "placeholderEmail": "john@example.com",
+    "placeholderMessage": "How can I help you?",
+    "submitButton": "Send"
+  },
+  "Footer": {
+    "copyright": "© {year} Portfolio - Elvis Sylvano."
+  },
+  "ProjectDetails": {
+    "common": {
+      "badge": "Case Study",
+      "backToPortfolio": "Back to portfolio",
+      "liveDemo": "Live demo",
+      "sourceCode": "Source code",
+      "techUsed": "Technologies used",
+      "overviewLabel": "01. Overview",
+      "challengeTitle": "The challenge",
+      "solutionTitle": "Implemented solutions",
+      "featuresTitle": "Implemented features",
+      "statsLabel": "Impact & Results",
+      "timelineLabel": "Timeline",
+      "roleLabel": "Role",
+      "industryLabel": "Industry",
+      "ctaLabel": "Request similar project",
+      "nextProjectLabel": "Next project",
+      "solutionLabel": "02. Solution",
+      "statsSectionLabel": "03. Impact & Results",
+      "featuresSectionLabel": "04. Features",
+      "statsTitle": "Measurable results"
+    },
+    "projects": {
+      "flotmax": {
+        "summary": "Educational platform to solve, simulate, and visualize maximum flow problems with a simple and fast interface.",
+        "challenge": "We were asked to program the process and calculation steps to solve a maximum flow problem in order to facilitate verification on paper.",
+        "challengePoints": [
+          "Implement of the Ford-Fulkerson and MANUEL BLOCH algorithms.",
+          "Use the DFS route."
+        ],
+        "solution": "An interactive interface was created to draw graphs, run calculations, and display the steps of each iteration until the maximum flow is obtained.",
+        "solutionHighlight": "The solution accelerated algorithm comprehension and reduced resolution time for complex exercises.",
+        "features": [
+          {
+            "title": "Step-by-step simulation",
+            "desc": "Detailed iteration display to follow each capacity update."
+          },
+          {
+            "title": "Graph editing",
+            "desc": "Quick addition/removal of nodes and edges with constraint controls."
+          },
+          {
+            "title": "Automatic verification",
+            "desc": "Built-in checks to validate results against expected outcomes."
+          }
+        ],
+        "stats": [
+          {
+            "value": "25%",
+            "label": "Time saved"
+          },
+          {
+            "value": "3x",
+            "label": "More test cases"
+          }
+        ],
+        "timeline": "2 week",
+        "role": "Lead programmer",
+        "industry": "Education"
+      },
+      "moodspace": {
+        "summary": "Mood tracking application featuring temporal visualizations to help users better understand their emotional cycles.",
+        "challenge": "Users lacked simple tools to record their mood and focus their attention.",
+        "challengePoints": [
+          "Implement a 'Client-side Storage' solution.",
+          "Create clear charts to visualize trends.",
+          "Develop an engaging experience to encourage consistent use."
+        ],
+        "solution": "Created an ultra-simple input journey, weekly charts, and other user-friendly sections.",
+        "solutionHighlight": "The app enables users to better understand their emotions and adopt consistent tracking habits.",
+        "features": [
+          {
+            "title": "AI Assistant",
+            "desc": "The ultimate companion to guide users in expressing their emotions."
+          },
+          {
+            "title": "Evolutionary Curves",
+            "desc": "Clear visualization of trends over 7, 30, and 90 days."
+          },
+          {
+            "title": "Personalized Moodboard",
+            "desc": "A creative space to visually express one's emotions."
+          },
+          {
+            "title": "Todo List",
+            "desc": "Task management tool to help channel focus and reduce stress."
+          }
+        ],
+        "stats": [
+          {
+            "value": "4.7/5",
+            "label": "Average mood Rating"
+          }
+        ],
+        "timeline": "1.5 weeks",
+        "role": "Developer",
+        "industry": "HealthTech"
+      },
+      "portfolio-2": {
+        "summary": "Second version of my portfolio with an emphasis on performance, modularity, and improved project presentation.",
+        "challenge": "The previous site was limited in its ability to present detailed case studies and easily evolve, and lacked fluidity and speed at startup.",
+        "challengePoints": [
+          "Improve performance for faster loading.",
+          "Optimize the user experience with animations and a more consistent design.",
+          "Highlight service offerings."
+        ],
+        "solution": "Complete redesign with reusable components and clear content structuring.",
+        "solutionHighlight": "This version facilitates future development and allows for better readability of technical achievements.",
+        "features": [
+          {
+            "title": "Consistent design system",
+            "desc": "Harmonized components to ensure a stable visual identity."
+          },
+          {
+            "title": "Dark/Light mode",
+            "desc": "Adaptive theme for a better user experience."
+          },
+          {
+            "title": "Measured animations",
+            "desc": "Smooth interactions without impacting performance."
+          },
+          {
+            "title": "Project detail pages",
+            "desc": "Dedicated navigation to showcase challenge, solution, and impact."
+          }
+        ],
+        "stats": [
+          {
+            "value": "95+",
+            "label": "Lighthouse perf"
+          },
+          {
+            "value": "100%",
+            "label": "Responsive"
+          }
+        ],
+        "timeline": "2 weeks",
+        "role": "Developer",
+        "industry": "Personal brand"
+      },
+      "portfolio": {
+        "summary": "First version of the portfolio that served as the basis for structuring my positioning and my first public projects.",
+        "challenge": "Quickly launch a professional online showcase while maintaining a clean and modern style.",
+        "challengePoints": [
+          "Deliver within a short timeframe to avoid losing visibility.",
+          "Structure the content for smooth reading.",
+          "Adopt a modern aesthetic that reflects my professional image."
+        ],
+        "solution": "Implementation of an initial version focused on readability with essential sections and a modern front-end stack.",
+        "solutionHighlight": "This foundation allowed us to gather valuable feedback and prepare for the migration to V2.",
+        "features": [
+          {
+            "title": "Clear landing page",
+            "desc": "Direct presentation of profile and contacts."
+          },
+          {
+            "title": "Essential sections",
+            "desc": "Experience, projects, and contact information accessible with a single scroll."
+          },
+          {
+            "title": "Modern Theme",
+            "desc": "Coherent palette and typography with a futuristic image."
+          }
+        ],
+        "stats": [
+          {
+            "value": "20+",
+            "label": "Unique Visitors"
+          },
+          {
+            "value": "3",
+
+            "label": "Featured Projects"
+          }
+        ],
+        "timeline": "1 week",
+        "role": "Developer",
+        "industry": "Personal Brand"
+      }
+    }
+  }
+}
