@@ -44,7 +44,7 @@ const Navbar = () => {
             </Link>
           ))}
           <div className="h-5 w-px bg-slate-300/70 dark:bg-slate-700/70" />
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-6">
             <LangageSwitcher />
             <SwitchTheme />
           </div>
