@@ -1,31 +1,30 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { getMessages } from "next-intl/server";
-import { notFound } from "next/navigation";
-import { cookies } from "next/headers";
-import { locales } from "@/i18n/request";
-import LocaleProvider from "@/components/LocaleProvider";
-import RestoreScroll from "@/components/RestoreScroll";
-import "../globals.css";
+import type { Metadata } from "next"
+import { Geist, Geist_Mono } from "next/font/google"
+import { getMessages } from "next-intl/server"
+import { notFound } from "next/navigation"
+import { cookies } from "next/headers"
+import { locales } from "@/i18n/request"
+import LocaleProvider from "@/components/LocaleProvider"
+import RestoreScroll from "@/components/RestoreScroll"
+import "../globals.css"
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] })
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] })
 
-export default async function LocaleLayout({
-  children,
-  params
-}: {
-  children: React.ReactNode;
-  params: { locale: string };
-}) {
-  const { locale } = params;
+type LayoutProps = {
+  children: React.ReactNode
+  params: Promise<{ locale: string }>
+}
 
-  if (!locales.includes(locale)) notFound();
+export default async function LocaleLayout({ children, params }: LayoutProps) {
+  const { locale } = await params
 
-  const messages = await getMessages({ locale });
-  const cookieStore = await cookies();
-  const themeCookie = cookieStore.get("theme")?.value;
-  const isDark = themeCookie === "dark";
+  if (!locales.includes(locale)) notFound()
+
+  const messages = await getMessages({ locale })
+  const cookieStore = await cookies()
+  const themeCookie = cookieStore.get("theme")?.value
+  const isDark = themeCookie === "dark"
 
   return (
     <html lang={locale} className={isDark ? "dark" : ""} suppressHydrationWarning>
@@ -36,19 +35,14 @@ export default async function LocaleLayout({
         </LocaleProvider>
       </body>
     </html>
-  );
+  )
 }
 
-
-export async function generateMetadata({
-  params
-}: {
-  params: { locale: string };
-}): Promise<Metadata> {
-  const { locale } = params;
+export async function generateMetadata({ params }: LayoutProps): Promise<Metadata> {
+  const { locale } = await params
 
   if (!locales.includes(locale)) {
-    return { title: "Not Found" };
+    return { title: "Not Found" }
   }
 
   return {
@@ -57,5 +51,5 @@ export async function generateMetadata({
       locale === "fr"
         ? "Mon site portfolio personnel construit avec Next.js et Tailwind CSS."
         : "My personal portfolio website built with Next.js and Tailwind CSS.",
-  };
+  }
 }
