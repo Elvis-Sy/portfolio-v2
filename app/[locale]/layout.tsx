@@ -51,10 +51,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         ? "Mon site portfolio personnel construit avec Next.js et Tailwind CSS."
         : "My personal portfolio website built with Next.js and Tailwind CSS.",
     alternates: {
-      canonical: `https://tonsite.com/${locale}`,
+      canonical: `https://elvissy.vercel.app/${locale}`,
       languages: {
-        en: "https://tonsite.com/en",
-        fr: "https://tonsite.com/fr",
+        en: "https://elvissy.vercel.app/en",
+        fr: "https://elvissy.vercel.app/fr",
       },
     },
   };
