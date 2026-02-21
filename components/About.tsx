@@ -1,8 +1,7 @@
 "use client"
 
 import { StarsIcon, File } from "lucide-react"
-import Button from "./ui/Button"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 const badgeLayout = [
   {
@@ -21,11 +20,13 @@ const badgeLayout = [
 
 const About = () => {
   const t = useTranslations("About")
+  const locale = useLocale()
   const badgeLabels = t.raw("badges") as string[]
   const badges = badgeLayout.map((badge, index) => ({
     ...badge,
     label: badgeLabels[index] ?? "",
   }))
+  const cvHref = locale === "fr" ? "/me/Elvis-Resume-fr.pdf" : "/me/Elvis-Resume-en.pdf"
 
   return (
     <section
@@ -59,13 +60,14 @@ const About = () => {
                   {t("statsLabel")}
                 </p>
               </div>
-              <Button
-                variant="outline"
-                className="cursor-pointer space-x-2 p-4 text-xs md:text-sm"
+              <a
+                className="border-primary text-primary hover:bg-primary/5 inline-flex cursor-pointer items-center justify-center space-x-2 rounded-lg border-2 p-4 text-xs font-bold transition-all active:scale-95 md:text-sm"
+                href={cvHref}
+                download
               >
                 <File className="h-6 w-6" />
                 <span>{t("cvButton")}</span>
-              </Button>
+              </a>
             </div>
           </div>
 
