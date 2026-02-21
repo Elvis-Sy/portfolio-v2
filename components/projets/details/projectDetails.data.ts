@@ -27,7 +27,7 @@ export const PROJECT_DETAIL_META: Record<string, ProjectDetailMeta> = {
     id: "portfolio-2",
     image: "/projects/portfolio-2.png",
     gradient: ["#a7f3d0", "#f0fdf4"],
-    liveUrl: "#",
+    liveUrl: "https://elvissy.vercel.app",
     sourceUrl: "https://github.com/Elvis-Sy/portfolio-v2",
     stack: {
       frontend: ["Next.js", "TypeScript", "Tailwind CSS"]
@@ -37,7 +37,7 @@ export const PROJECT_DETAIL_META: Record<string, ProjectDetailMeta> = {
     id: "portfolio",
     image: "/projects/portfolio.png",
     gradient: ["#2f4f4f", "#556b2f"],
-    liveUrl: "#",
+    liveUrl: "https://old-elvissy.vercel.app",
     sourceUrl: "https://github.com/Elvis-Sy/ES-portfolio",
     stack: {
       frontend: ["Next.js", "JavaScript", "Tailwind CSS"],
