@@ -7,6 +7,7 @@ import { locales } from "@/i18n/request";
 import LocaleProvider from "@/components/LocaleProvider";
 import RestoreScroll from "@/components/RestoreScroll";
 import Toast from "@/components/ui/Toast";
+import { Analytics } from "@vercel/analytics/next";
 import "../globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -31,6 +32,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <LocaleProvider locale={locale} messages={messages}>
           <Toast />
           {children}
+          <Analytics />
         </LocaleProvider>
       </body>
     </html>
