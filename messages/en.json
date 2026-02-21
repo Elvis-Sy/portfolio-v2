@@ -175,15 +175,18 @@
     "emailLabel": "Email",
     "phoneLabel": "Phone",
     "locationLabel": "Location",
-    "formFirstName": "First name",
-    "formLastName": "Last name",
+    "formFullName": "Full name",
     "formEmail": "Email address",
     "formMessage": "Your message",
-    "placeholderFirstName": "John",
-    "placeholderLastName": "Doe",
+    "placeholderFullName": "John Doe",
     "placeholderEmail": "john@example.com",
     "placeholderMessage": "How can I help you?",
-    "submitButton": "Send"
+    "submitButton": "Send",
+    "submitButtonLoading": "Sending...",
+    "errorRequired": "This field is required.",
+    "errorEmail": "Please enter a valid email address.",
+    "toastSuccess": "Sent successfully.",
+    "toastError": "Error while sending."
   },
   "Footer": {
     "copyright": "© {year} Portfolio - Elvis Sylvano."

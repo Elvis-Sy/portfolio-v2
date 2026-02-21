@@ -1,13 +1,88 @@
 "use client"
 
+import { useState, type ChangeEvent, type FocusEvent, type FormEvent } from "react"
 import Input from "./ui/Input"
 import Button from "./ui/Button"
 import { Mail, MapPin, Phone, SendHorizonal } from "lucide-react"
 import Link from "next/link"
 import { useTranslations } from "next-intl"
+import { toast } from "sonner"
+import sendContactMail from "@/lib/mailer"
+
+type FormState = {
+  fullName: string
+  email: string
+  message: string
+}
 
 const Contact = () => {
   const t = useTranslations("Contact")
+  const [form, setForm] = useState<FormState>({
+    fullName: "",
+    email: "",
+    message: "",
+  })
+  const [touched, setTouched] = useState<Partial<Record<keyof FormState, boolean>>>({})
+  const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({})
+  const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const validate = (values: FormState) => {
+    const next: Partial<Record<keyof FormState, string>> = {}
+    if (!values.fullName.trim()) next.fullName = t("errorRequired")
+    if (!values.email.trim()) {
+      next.email = t("errorRequired")
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
+      next.email = t("errorEmail")
+    }
+    if (!values.message.trim()) next.message = t("errorRequired")
+    return next
+  }
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = event.target
+    setForm((prev) => {
+      const next = { ...prev, [name]: value }
+      if (submitted || touched[name as keyof FormState]) {
+        setErrors(validate(next))
+      }
+      return next
+    })
+  }
+
+  const handleBlur = (event: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const field = event.target.name as keyof FormState
+    setTouched((prev) => ({ ...prev, [field]: true }))
+    setErrors(validate(form))
+  }
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    setSubmitted(true)
+    const nextErrors = validate(form)
+    setErrors(nextErrors)
+    if (Object.keys(nextErrors).length > 0) return
+
+    setIsSubmitting(true)
+    try {
+      await sendContactMail({
+        name: form.fullName.trim(),
+        email: form.email.trim(),
+        message: form.message.trim(),
+      })
+      toast.success(t("toastSuccess"), { className: "toast-success" })
+      setForm({ fullName: "", email: "", message: "" })
+      setTouched({})
+      setSubmitted(false)
+    } catch (error) {
+      toast.error(t("toastError"), { className: "toast-error" })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  const fieldError = (field: keyof FormState) =>
+    (submitted || touched[field]) && errors[field] ? errors[field] : undefined
 
   return (
     <section
@@ -97,24 +172,29 @@ const Contact = () => {
               </div>
             </div>
 
-            <form className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
-                <Input
-                  label={t("formFirstName")}
-                  placeholder={t("placeholderFirstName")}
-                  type="text"
-                />
-                <Input
-                  label={t("formLastName")}
-                  placeholder={t("placeholderLastName")}
-                  type="text"
-                />
-              </div>
+            <form className="space-y-4" onSubmit={handleSubmit} noValidate>
+              <Input
+                label={t("formFullName")}
+                placeholder={t("placeholderFullName")}
+                type="text"
+                name="fullName"
+                value={form.fullName}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                error={fieldError("fullName")}
+                required
+              />
 
               <Input
                 label={t("formEmail")}
                 placeholder={t("placeholderEmail")}
                 type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                error={fieldError("email")}
+                required
               />
 
               <Input
@@ -122,13 +202,20 @@ const Contact = () => {
                 textarea
                 rows={4}
                 placeholder={t("placeholderMessage")}
+                name="message"
+                value={form.message}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                error={fieldError("message")}
+                required
               />
 
               <Button
                 className="bg-primary shadow-primary/20 flex w-full items-center justify-center gap-2 rounded-xl py-4 font-bold text-white shadow-lg transition-all hover:brightness-110"
                 type="submit"
+                disabled={isSubmitting}
               >
-                {t("submitButton")}
+                {isSubmitting ? t("submitButtonLoading") : t("submitButton")}
                 <SendHorizonal />
               </Button>
             </form>

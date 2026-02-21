@@ -6,6 +6,7 @@ import { cookies } from "next/headers";
 import { locales } from "@/i18n/request";
 import LocaleProvider from "@/components/LocaleProvider";
 import RestoreScroll from "@/components/RestoreScroll";
+import Toast from "@/components/ui/Toast";
 import "../globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -27,8 +28,8 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html lang={locale} className={isDark ? "dark" : ""} suppressHydrationWarning>
       <body className={`${geistSans.className} ${geistMono.className} antialiased overflow-x-hidden`}>
         <RestoreScroll />
-        {/* <-- Provider devient un client component */}
         <LocaleProvider locale={locale} messages={messages}>
+          <Toast />
           {children}
         </LocaleProvider>
       </body>

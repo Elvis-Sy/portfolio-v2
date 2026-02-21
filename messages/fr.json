@@ -197,15 +197,18 @@
     "emailLabel": "Email",
     "phoneLabel": "Téléphone",
     "locationLabel": "Localisation",
-    "formFirstName": "Prénom",
-    "formLastName": "Nom",
+    "formFullName": "Nom complet",
     "formEmail": "Adresse email",
     "formMessage": "Votre message",
-    "placeholderFirstName": "John",
-    "placeholderLastName": "Doe",
+    "placeholderFullName": "John Doe",
     "placeholderEmail": "john@example.com",
     "placeholderMessage": "Comment puis-je vous aider ?",
-    "submitButton": "Envoyer"
+    "submitButton": "Envoyer",
+    "submitButtonLoading": "Envoi...",
+    "errorRequired": "Ce champ est requis.",
+    "errorEmail": "Adresse email invalide.",
+    "toastSuccess": "Envoyé avec succès.",
+    "toastError": "Erreur lors de l'envoi."
   },
   "Footer": {
     "copyright": "© {year} Portfolio - Elvis Sylvano."
