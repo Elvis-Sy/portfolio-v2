@@ -75,6 +75,7 @@ const Contact = () => {
       setTouched({})
       setSubmitted(false)
     } catch (error) {
+      console.error("Contact form send error:", error)
       toast.error(t("toastError"), { className: "toast-error" })
     } finally {
       setIsSubmitting(false)
